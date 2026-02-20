@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Tiquicia_Lodge</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{88a41070-a8d1-4acb-be92-24771941f969}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Tiquicia_Lodge</RootNamespace>
+    <AssemblyName>Tiquicia_Lodge</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ZonasTicas.sql" />
+    <Build Include="dbo\Tables\VistasPropiedad.sql" />
+    <Build Include="dbo\Tables\VideosPropiedad.sql" />
+    <Build Include="dbo\Tables\VerificacionesUsuario.sql" />
+    <Build Include="dbo\Tables\VerificacionesPropiedad.sql" />
+    <Build Include="dbo\Tables\Usuarios.sql" />
+    <Build Include="dbo\Tables\TransporteCercano.sql" />
+    <Build Include="dbo\Tables\TipoAlojamiento.sql" />
+    <Build Include="dbo\Tables\TicketsSoporte.sql" />
+    <Build Include="dbo\Tables\Temporadas.sql" />
+    <Build Include="dbo\Tables\TelefonosUsuario.sql" />
+    <Build Include="dbo\Tables\SuscripcionesProveedor.sql" />
+    <Build Include="dbo\Tables\Sesiones.sql" />
+    <Build Include="dbo\Tables\ServiciosPropiedad.sql" />
+    <Build Include="dbo\Tables\SellosConfianza.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Tables\RespuestasCalificacion.sql" />
+    <Build Include="dbo\Tables\Reservas.sql" />
+    <Build Include="dbo\Tables\RequerimientosReserva.sql" />
+    <Build Include="dbo\Tables\Reportes.sql" />
+    <Build Include="dbo\Tables\ReglasCasa.sql" />
+    <Build Include="dbo\Tables\Reembolsos.sql" />
+    <Build Include="dbo\Tables\RecuperacionContrasena.sql" />
+    <Build Include="dbo\Tables\Provincias.sql" />
+    <Build Include="dbo\Tables\PropiedadTransporteCercano.sql" />
+    <Build Include="dbo\Tables\PropiedadServicios.sql" />
+    <Build Include="dbo\Tables\PropiedadSellos.sql" />
+    <Build Include="dbo\Tables\PropiedadRequerimientos.sql" />
+    <Build Include="dbo\Tables\PropiedadReglas.sql" />
+    <Build Include="dbo\Tables\PropiedadPoliticasCancelacion.sql" />
+    <Build Include="dbo\Tables\PropiedadLugaresCercanos.sql" />
+    <Build Include="dbo\Tables\Propiedades.sql" />
+    <Build Include="dbo\Tables\PropiedadEquipamiento.sql" />
+    <Build Include="dbo\Tables\PropiedadComerciosCercanos.sql" />
+    <Build Include="dbo\Tables\PromocionesPropiedad.sql" />
+    <Build Include="dbo\Tables\Promociones.sql" />
+    <Build Include="dbo\Tables\PreciosTemporada.sql" />
+    <Build Include="dbo\Tables\PoliticasCancelacion.sql" />
+    <Build Include="dbo\Tables\PlanesProveedor.sql" />
+    <Build Include="dbo\Tables\PagosPendientes.sql" />
+    <Build Include="dbo\Tables\PagosComisiones.sql" />
+    <Build Include="dbo\Tables\Pagos.sql" />
+    <Build Include="dbo\Tables\Notificaciones.sql" />
+    <Build Include="dbo\Tables\NewsletterSuscriptores.sql" />
+    <Build Include="dbo\Tables\Nacionalidades.sql" />
+    <Build Include="dbo\Tables\Monedas.sql" />
+    <Build Include="dbo\Tables\ModulosSistema.sql" />
+    <Build Include="dbo\Tables\MetricasDiarias.sql" />
+    <Build Include="dbo\Tables\MensajesSoporte.sql" />
+    <Build Include="dbo\Tables\LugaresTuristicos.sql" />
+    <Build Include="dbo\Tables\LogsErrores.sql" />
+    <Build Include="dbo\Tables\ListasDeseos.sql" />
+    <Build Include="dbo\Tables\ListaPropiedades.sql" />
+    <Build Include="dbo\Tables\HorariosCheckInOut.sql" />
+    <Build Include="dbo\Tables\HistorialPrecios.sql" />
+    <Build Include="dbo\Tables\HistorialEstadosReserva.sql" />
+    <Build Include="dbo\Tables\GananciasProveedor.sql" />
+    <Build Include="dbo\Tables\FotosPropiedad.sql" />
+    <Build Include="dbo\Tables\FAQs.sql" />
+    <Build Include="dbo\Tables\Facturas.sql" />
+    <Build Include="dbo\Tables\ExperienciasCercanas.sql" />
+    <Build Include="dbo\Tables\Experiencias.sql" />
+    <Build Include="dbo\Tables\EvidenciasReporte.sql" />
+    <Build Include="dbo\Tables\Estados.sql" />
+    <Build Include="dbo\Tables\Equipamiento.sql" />
+    <Build Include="dbo\Tables\DocumentosVerificacion.sql" />
+    <Build Include="dbo\Tables\DocumentosPropiedad.sql" />
+    <Build Include="dbo\Tables\Distritos.sql" />
+    <Build Include="dbo\Tables\DescuentosPropiedad.sql" />
+    <Build Include="dbo\Tables\Descuentos.sql" />
+    <Build Include="dbo\Tables\DashboardProveedor.sql" />
+    <Build Include="dbo\Tables\CorreosUsuario.sql" />
+    <Build Include="dbo\Tables\ContactosDirectos.sql" />
+    <Build Include="dbo\Tables\ConfiguracionSistema.sql" />
+    <Build Include="dbo\Tables\Comisiones.sql" />
+    <Build Include="dbo\Tables\ComerciosCercanos.sql" />
+    <Build Include="dbo\Tables\ClicksContacto.sql" />
+    <Build Include="dbo\Tables\CategoriasFAQ.sql" />
+    <Build Include="dbo\Tables\CategoriaServicio.sql" />
+    <Build Include="dbo\Tables\CategoriaLugarTuristico.sql" />
+    <Build Include="dbo\Tables\CategoriaExperiencia.sql" />
+    <Build Include="dbo\Tables\CategoriaEquipamiento.sql" />
+    <Build Include="dbo\Tables\CategoriaAlojamiento.sql" />
+    <Build Include="dbo\Tables\Cantones.sql" />
+    <Build Include="dbo\Tables\CalificacionesPropiedad.sql" />
+    <Build Include="dbo\Tables\CalificacionesCliente.sql" />
+    <Build Include="dbo\Tables\BusquedasUsuarios.sql" />
+    <Build Include="dbo\Tables\BitacoraAcciones.sql" />
+  </ItemGroup>
+</Project>
