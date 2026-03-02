@@ -1,7 +1,100 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Documentos\\01 Andrey\\01 2026\\Tiquicia_Lodge\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\controllers\\calificacionespropiedadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\controllers\\calificacionespropiedadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\controllers\\pagoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\controllers\\pagoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\controllers\\propiedadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\controllers\\propiedadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\controllers\\reservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\controllers\\reservascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\interfaces\\icalificacionpropiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\interfaces\\icalificacionpropiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\interfaces\\ipagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\interfaces\\ipagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\interfaces\\ipropiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\interfaces\\ipropiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\interfaces\\ireservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\interfaces\\ireservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\models\\calificacionpropiedad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\models\\calificacionpropiedad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\models\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\models\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\models\\propiedad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\models\\propiedad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\services\\calificacionpropiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\services\\calificacionpropiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\services\\pagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\services\\pagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\services\\propiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\services\\propiedadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\services\\reservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\services\\reservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\dbo\\tables\\bitacoraacciones.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\dbo\\tables\\bitacoraacciones.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|c:\\users\\esteb\\desktop\\tiquicia_lodge\\tiquicia_lodge\\dbo\\tables\\bitacoraacciones.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{376CDC21-799C-5A28-98AC-C3A822086422}|Tiquicia_Lodge\\Tiquicia_Lodge.csproj|solutionrelative:tiquicia_lodge\\dbo\\tables\\bitacoraacciones.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +102,292 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PagosController.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\PagosController.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Controllers\\PagosController.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\PagosController.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Controllers\\PagosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:57.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PropiedadesController.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\PropiedadesController.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Controllers\\PropiedadesController.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\PropiedadesController.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Controllers\\PropiedadesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:57.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReservasController.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\ReservasController.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Controllers\\ReservasController.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\ReservasController.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Controllers\\ReservasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:56.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:56.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICalificacionPropiedadService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\ICalificacionPropiedadService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Interfaces\\ICalificacionPropiedadService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\ICalificacionPropiedadService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Interfaces\\ICalificacionPropiedadService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:53.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IPagoService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IPagoService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Interfaces\\IPagoService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IPagoService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Interfaces\\IPagoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:52.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IPropiedadService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IPropiedadService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Interfaces\\IPropiedadService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IPropiedadService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Interfaces\\IPropiedadService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:52.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalificacionesPropiedadController.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\CalificacionesPropiedadController.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Controllers\\CalificacionesPropiedadController.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Controllers\\CalificacionesPropiedadController.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Controllers\\CalificacionesPropiedadController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:50:25.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IReservaService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IReservaService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Interfaces\\IReservaService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IReservaService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Interfaces\\IReservaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:51.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Interfaces\\IUsuarioService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Interfaces\\IUsuarioService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Interfaces\\IUsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:51.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:48.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CalificacionPropiedad.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\CalificacionPropiedad.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Models\\CalificacionPropiedad.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\CalificacionPropiedad.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Models\\CalificacionPropiedad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:47.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Pago.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Pago.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Models\\Pago.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Pago.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Models\\Pago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:47.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Propiedad.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Propiedad.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Models\\Propiedad.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Propiedad.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Models\\Propiedad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:46.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Reserva.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Reserva.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Models\\Reserva.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Reserva.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Models\\Reserva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:46.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Models\\Usuario.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:45.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CalificacionPropiedadService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\CalificacionPropiedadService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Services\\CalificacionPropiedadService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\CalificacionPropiedadService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Services\\CalificacionPropiedadService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:43.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PagoService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\PagoService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Services\\PagoService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\PagoService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Services\\PagoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:43.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PropiedadService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\PropiedadService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Services\\PropiedadService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\PropiedadService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Services\\PropiedadService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:42.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ReservaService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\ReservaService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Services\\ReservaService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\ReservaService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Services\\ReservaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:41.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Tiquicia_Lodge\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T04:51:40.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BitacoraAcciones.sql ",
+              "DocumentMoniker": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\dbo\\Tables\\BitacoraAcciones.sql",
+              "RelativeDocumentMoniker": "Tiquicia_Lodge\\dbo\\Tables\\BitacoraAcciones.sql",
+              "ToolTip": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge\\dbo\\Tables\\BitacoraAcciones.sql",
+              "RelativeToolTip": "Tiquicia_Lodge\\dbo\\Tables\\BitacoraAcciones.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-02T04:50:57.601Z",
+              "EditorCaption": ""
             }
           ]
         }
