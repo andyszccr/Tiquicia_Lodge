@@ -109,6 +109,660 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ComerciosCercanosController",
+    "Method": "Get",
+    "RelativePath": "api/ComerciosCercanos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.ComerciosCercanos, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ComerciosCercanosController",
+    "Method": "Post",
+    "RelativePath": "api/ComerciosCercanos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.ComerciosCercanos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.ComerciosCercanos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ComerciosCercanosController",
+    "Method": "Get",
+    "RelativePath": "api/ComerciosCercanos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.ComerciosCercanos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ComerciosCercanosController",
+    "Method": "Put",
+    "RelativePath": "api/ComerciosCercanos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.ComerciosCercanos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ComerciosCercanosController",
+    "Method": "Delete",
+    "RelativePath": "api/ComerciosCercanos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.CorreosUsuariosController",
+    "Method": "Get",
+    "RelativePath": "api/CorreosUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.CorreosUsuario, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.CorreosUsuariosController",
+    "Method": "Post",
+    "RelativePath": "api/CorreosUsuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.CorreosUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.CorreosUsuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.CorreosUsuariosController",
+    "Method": "Get",
+    "RelativePath": "api/CorreosUsuarios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.CorreosUsuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.CorreosUsuariosController",
+    "Method": "Put",
+    "RelativePath": "api/CorreosUsuarios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.CorreosUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.CorreosUsuariosController",
+    "Method": "Delete",
+    "RelativePath": "api/CorreosUsuarios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EquipamientoController",
+    "Method": "Get",
+    "RelativePath": "api/Equipamiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Equipamiento, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EquipamientoController",
+    "Method": "Post",
+    "RelativePath": "api/Equipamiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Equipamiento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Equipamiento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EquipamientoController",
+    "Method": "Get",
+    "RelativePath": "api/Equipamiento/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Equipamiento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EquipamientoController",
+    "Method": "Put",
+    "RelativePath": "api/Equipamiento/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Equipamiento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EquipamientoController",
+    "Method": "Delete",
+    "RelativePath": "api/Equipamiento/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EstadosController",
+    "Method": "Get",
+    "RelativePath": "api/Estados",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Estado, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EstadosController",
+    "Method": "Post",
+    "RelativePath": "api/Estados",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Estado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Estado",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EstadosController",
+    "Method": "Get",
+    "RelativePath": "api/Estados/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Estado",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EstadosController",
+    "Method": "Put",
+    "RelativePath": "api/Estados/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Estado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.EstadosController",
+    "Method": "Delete",
+    "RelativePath": "api/Estados/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.FotosPropiedadsController",
+    "Method": "Get",
+    "RelativePath": "api/FotosPropiedads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.FotosPropiedad, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.FotosPropiedadsController",
+    "Method": "Post",
+    "RelativePath": "api/FotosPropiedads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.FotosPropiedad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.FotosPropiedad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.FotosPropiedadsController",
+    "Method": "Get",
+    "RelativePath": "api/FotosPropiedads/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.FotosPropiedad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.FotosPropiedadsController",
+    "Method": "Put",
+    "RelativePath": "api/FotosPropiedads/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.FotosPropiedad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.FotosPropiedadsController",
+    "Method": "Delete",
+    "RelativePath": "api/FotosPropiedads/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.HorariosCheckInOutController",
+    "Method": "Get",
+    "RelativePath": "api/HorariosCheckInOut",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.HorariosCheckInOut, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.HorariosCheckInOutController",
+    "Method": "Post",
+    "RelativePath": "api/HorariosCheckInOut",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.HorariosCheckInOut",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.HorariosCheckInOut",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.HorariosCheckInOutController",
+    "Method": "Get",
+    "RelativePath": "api/HorariosCheckInOut/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.HorariosCheckInOut",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.HorariosCheckInOutController",
+    "Method": "Put",
+    "RelativePath": "api/HorariosCheckInOut/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.HorariosCheckInOut",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.HorariosCheckInOutController",
+    "Method": "Delete",
+    "RelativePath": "api/HorariosCheckInOut/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Tiquicia_Lodge.Controllers.PagosController",
     "Method": "Get",
     "RelativePath": "api/Pagos",
@@ -205,6 +859,224 @@
     "ContainingType": "Tiquicia_Lodge.Controllers.PagosController",
     "Method": "Delete",
     "RelativePath": "api/Pagos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PoliticasCancelacionController",
+    "Method": "Get",
+    "RelativePath": "api/PoliticasCancelacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.PoliticasCancelacion, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PoliticasCancelacionController",
+    "Method": "Post",
+    "RelativePath": "api/PoliticasCancelacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PoliticasCancelacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PoliticasCancelacion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PoliticasCancelacionController",
+    "Method": "Get",
+    "RelativePath": "api/PoliticasCancelacion/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PoliticasCancelacion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PoliticasCancelacionController",
+    "Method": "Put",
+    "RelativePath": "api/PoliticasCancelacion/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PoliticasCancelacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PoliticasCancelacionController",
+    "Method": "Delete",
+    "RelativePath": "api/PoliticasCancelacion/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
+    "Method": "Get",
+    "RelativePath": "api/PropiedadEquipamiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.PropiedadEquipamiento, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
+    "Method": "Post",
+    "RelativePath": "api/PropiedadEquipamiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadEquipamiento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadEquipamiento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
+    "Method": "Get",
+    "RelativePath": "api/PropiedadEquipamiento/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadEquipamiento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
+    "Method": "Put",
+    "RelativePath": "api/PropiedadEquipamiento/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadEquipamiento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
+    "Method": "Delete",
+    "RelativePath": "api/PropiedadEquipamiento/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -327,6 +1199,551 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
+    "Method": "Get",
+    "RelativePath": "api/PropiedadReglas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.PropiedadReglas, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
+    "Method": "Post",
+    "RelativePath": "api/PropiedadReglas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadReglas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadReglas",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
+    "Method": "Get",
+    "RelativePath": "api/PropiedadReglas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadReglas",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
+    "Method": "Put",
+    "RelativePath": "api/PropiedadReglas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadReglas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
+    "Method": "Delete",
+    "RelativePath": "api/PropiedadReglas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
+    "Method": "Get",
+    "RelativePath": "api/PropiedadServicios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.PropiedadServicios, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
+    "Method": "Post",
+    "RelativePath": "api/PropiedadServicios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadServicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadServicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
+    "Method": "Get",
+    "RelativePath": "api/PropiedadServicios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadServicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
+    "Method": "Put",
+    "RelativePath": "api/PropiedadServicios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadServicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
+    "Method": "Delete",
+    "RelativePath": "api/PropiedadServicios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ProvinciasController",
+    "Method": "Get",
+    "RelativePath": "api/Provincias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Provincias, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ProvinciasController",
+    "Method": "Post",
+    "RelativePath": "api/Provincias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Provincias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Provincias",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ProvinciasController",
+    "Method": "Get",
+    "RelativePath": "api/Provincias/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Provincias",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ProvinciasController",
+    "Method": "Put",
+    "RelativePath": "api/Provincias/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Provincias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ProvinciasController",
+    "Method": "Delete",
+    "RelativePath": "api/Provincias/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RecuperacionContrasenasController",
+    "Method": "Get",
+    "RelativePath": "api/RecuperacionContrasenas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.RecuperacionContrasena, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RecuperacionContrasenasController",
+    "Method": "Post",
+    "RelativePath": "api/RecuperacionContrasenas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.RecuperacionContrasena",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.RecuperacionContrasena",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RecuperacionContrasenasController",
+    "Method": "Get",
+    "RelativePath": "api/RecuperacionContrasenas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.RecuperacionContrasena",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RecuperacionContrasenasController",
+    "Method": "Put",
+    "RelativePath": "api/RecuperacionContrasenas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.RecuperacionContrasena",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RecuperacionContrasenasController",
+    "Method": "Delete",
+    "RelativePath": "api/RecuperacionContrasenas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ReglasCasaController",
+    "Method": "Get",
+    "RelativePath": "api/ReglasCasa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.ReglasCasa, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ReglasCasaController",
+    "Method": "Post",
+    "RelativePath": "api/ReglasCasa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.ReglasCasa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.ReglasCasa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ReglasCasaController",
+    "Method": "Get",
+    "RelativePath": "api/ReglasCasa/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.ReglasCasa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ReglasCasaController",
+    "Method": "Put",
+    "RelativePath": "api/ReglasCasa/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.ReglasCasa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.ReglasCasaController",
+    "Method": "Delete",
+    "RelativePath": "api/ReglasCasa/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Tiquicia_Lodge.Controllers.ReservasController",
     "Method": "Get",
     "RelativePath": "api/Reservas",
@@ -436,6 +1853,442 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RolesController",
+    "Method": "Get",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Roles, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RolesController",
+    "Method": "Post",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Roles",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RolesController",
+    "Method": "Get",
+    "RelativePath": "api/Roles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Roles",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RolesController",
+    "Method": "Put",
+    "RelativePath": "api/Roles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.RolesController",
+    "Method": "Delete",
+    "RelativePath": "api/Roles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.SesionesController",
+    "Method": "Get",
+    "RelativePath": "api/Sesiones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Sesiones, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.SesionesController",
+    "Method": "Post",
+    "RelativePath": "api/Sesiones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Sesiones",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Sesiones",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.SesionesController",
+    "Method": "Get",
+    "RelativePath": "api/Sesiones/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.Sesiones",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.SesionesController",
+    "Method": "Put",
+    "RelativePath": "api/Sesiones/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Sesiones",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.SesionesController",
+    "Method": "Delete",
+    "RelativePath": "api/Sesiones/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TelefonosUsuariosController",
+    "Method": "Get",
+    "RelativePath": "api/TelefonosUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.TelefonosUsuario, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TelefonosUsuariosController",
+    "Method": "Post",
+    "RelativePath": "api/TelefonosUsuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.TelefonosUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.TelefonosUsuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TelefonosUsuariosController",
+    "Method": "Get",
+    "RelativePath": "api/TelefonosUsuarios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.TelefonosUsuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TelefonosUsuariosController",
+    "Method": "Put",
+    "RelativePath": "api/TelefonosUsuarios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.TelefonosUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TelefonosUsuariosController",
+    "Method": "Delete",
+    "RelativePath": "api/TelefonosUsuarios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TransporteCercanoController",
+    "Method": "Get",
+    "RelativePath": "api/TransporteCercano",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.TransporteCercano, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TransporteCercanoController",
+    "Method": "Post",
+    "RelativePath": "api/TransporteCercano",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.TransporteCercano",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.TransporteCercano",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TransporteCercanoController",
+    "Method": "Get",
+    "RelativePath": "api/TransporteCercano/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.TransporteCercano",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TransporteCercanoController",
+    "Method": "Put",
+    "RelativePath": "api/TransporteCercano/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.TransporteCercano",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.TransporteCercanoController",
+    "Method": "Delete",
+    "RelativePath": "api/TransporteCercano/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Tiquicia_Lodge.Controllers.UsuariosController",
     "Method": "Get",
     "RelativePath": "api/Usuarios",
@@ -532,6 +2385,115 @@
     "ContainingType": "Tiquicia_Lodge.Controllers.UsuariosController",
     "Method": "Delete",
     "RelativePath": "api/Usuarios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.VerificacionesUsuariosController",
+    "Method": "Get",
+    "RelativePath": "api/VerificacionesUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.VerificacionesUsuario, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.VerificacionesUsuariosController",
+    "Method": "Post",
+    "RelativePath": "api/VerificacionesUsuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.VerificacionesUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.VerificacionesUsuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.VerificacionesUsuariosController",
+    "Method": "Get",
+    "RelativePath": "api/VerificacionesUsuarios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Tiquicia_Lodge.Domain.Entities.VerificacionesUsuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.VerificacionesUsuariosController",
+    "Method": "Put",
+    "RelativePath": "api/VerificacionesUsuarios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.VerificacionesUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.VerificacionesUsuariosController",
+    "Method": "Delete",
+    "RelativePath": "api/VerificacionesUsuarios/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

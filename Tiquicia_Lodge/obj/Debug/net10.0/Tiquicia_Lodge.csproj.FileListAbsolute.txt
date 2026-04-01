@@ -219,3 +219,4 @@ C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_
 C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Application.pdb
 C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Infrastructure.pdb
 C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Domain.pdb
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

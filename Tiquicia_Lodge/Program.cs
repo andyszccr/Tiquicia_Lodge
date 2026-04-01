@@ -32,6 +32,23 @@ builder.Services.AddScoped<IPropiedadServiciosService, PropiedadServiciosService
 builder.Services.AddScoped<IProvinciasService, ProvinciasService>();
 builder.Services.AddScoped<IRolesService, RolesService>();
 
+// Módulo de Seguridad y Autenticación
+builder.Services.AddScoped<ISesionesService, SesionesService>();
+builder.Services.AddScoped<IRecuperacionContrasenaService, RecuperacionContrasenaService>();
+builder.Services.AddScoped<ITelefonosUsuarioService, TelefonosUsuarioService>();
+builder.Services.AddScoped<ICorreosUsuarioService, CorreosUsuarioService>();
+builder.Services.AddScoped<IVerificacionesUsuarioService, VerificacionesUsuarioService>();
+
+// Módulo de Entorno Inmobiliario (Catálogo Extendido)
+builder.Services.AddScoped<IEquipamientoService, EquipamientoService>();
+builder.Services.AddScoped<IPropiedadEquipamientoService, PropiedadEquipamientoService>();
+builder.Services.AddScoped<IReglasCasaService, ReglasCasaService>();
+builder.Services.AddScoped<IPropiedadReglasService, PropiedadReglasService>();
+builder.Services.AddScoped<IHorariosCheckInOutService, HorariosCheckInOutService>();
+builder.Services.AddScoped<IPoliticasCancelacionService, PoliticasCancelacionService>();
+builder.Services.AddScoped<IComerciosCercanosService, ComerciosCercanosService>();
+builder.Services.AddScoped<ITransporteCercanoService, TransporteCercanoService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
