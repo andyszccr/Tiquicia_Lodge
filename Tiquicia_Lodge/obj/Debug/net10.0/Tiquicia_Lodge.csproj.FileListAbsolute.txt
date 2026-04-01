@@ -213,3 +213,9 @@ C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Swashbuck
 C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\obj\Debug\net10.0\Tiquicia_Lodge.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Application.dll
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Domain.dll
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Infrastructure.dll
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Application.pdb
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Infrastructure.pdb
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge\bin\Debug\net10.0\Tiquicia_Lodge.Domain.pdb

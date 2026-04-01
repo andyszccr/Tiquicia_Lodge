@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tiquicia_Lodge.Interfaces;
-using Tiquicia_Lodge.Models;
+using Tiquicia_Lodge.Application.Interfaces;
+using Tiquicia_Lodge.Domain.Entities;
 
 namespace Tiquicia_Lodge.Controllers
 {

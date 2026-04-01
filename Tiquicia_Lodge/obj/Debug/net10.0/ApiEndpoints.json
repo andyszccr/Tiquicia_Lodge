@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Models.CalificacionPropiedad, Tiquicia_Lodge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.CalificacionPropiedad, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -29,13 +29,13 @@
     "Parameters": [
       {
         "Name": "calificacion",
-        "Type": "Tiquicia_Lodge.Models.CalificacionPropiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.CalificacionPropiedad",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.CalificacionPropiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.CalificacionPropiedad",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.CalificacionPropiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.CalificacionPropiedad",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -86,7 +86,7 @@
       },
       {
         "Name": "calificacion",
-        "Type": "Tiquicia_Lodge.Models.CalificacionPropiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.CalificacionPropiedad",
         "IsRequired": true
       }
     ],
@@ -118,7 +118,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Models.Pago, Tiquicia_Lodge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Pago, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -138,13 +138,13 @@
     "Parameters": [
       {
         "Name": "pago",
-        "Type": "Tiquicia_Lodge.Models.Pago",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Pago",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Pago",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Pago",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -170,7 +170,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Pago",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Pago",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -195,7 +195,7 @@
       },
       {
         "Name": "pago",
-        "Type": "Tiquicia_Lodge.Models.Pago",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Pago",
         "IsRequired": true
       }
     ],
@@ -227,7 +227,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Models.Propiedad, Tiquicia_Lodge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Propiedad, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -247,13 +247,13 @@
     "Parameters": [
       {
         "Name": "propiedad",
-        "Type": "Tiquicia_Lodge.Models.Propiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Propiedad",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Propiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Propiedad",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -279,7 +279,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Propiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Propiedad",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -304,7 +304,7 @@
       },
       {
         "Name": "propiedad",
-        "Type": "Tiquicia_Lodge.Models.Propiedad",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Propiedad",
         "IsRequired": true
       }
     ],
@@ -336,7 +336,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Models.Reserva, Tiquicia_Lodge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Reserva, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -356,13 +356,13 @@
     "Parameters": [
       {
         "Name": "reserva",
-        "Type": "Tiquicia_Lodge.Models.Reserva",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Reserva",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Reserva",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Reserva",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -388,7 +388,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Reserva",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Reserva",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -413,7 +413,7 @@
       },
       {
         "Name": "reserva",
-        "Type": "Tiquicia_Lodge.Models.Reserva",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Reserva",
         "IsRequired": true
       }
     ],
@@ -445,7 +445,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Models.Usuario, Tiquicia_Lodge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Tiquicia_Lodge.Domain.Entities.Usuario, Tiquicia_Lodge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -465,13 +465,13 @@
     "Parameters": [
       {
         "Name": "usuario",
-        "Type": "Tiquicia_Lodge.Models.Usuario",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Usuario",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Usuario",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Usuario",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -497,7 +497,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Tiquicia_Lodge.Models.Usuario",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Usuario",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -522,7 +522,7 @@
       },
       {
         "Name": "usuario",
-        "Type": "Tiquicia_Lodge.Models.Usuario",
+        "Type": "Tiquicia_Lodge.Domain.Entities.Usuario",
         "IsRequired": true
       }
     ],

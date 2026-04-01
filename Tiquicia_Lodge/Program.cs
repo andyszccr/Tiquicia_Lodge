@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Tiquicia_Lodge.Models;
-using Tiquicia_Lodge.Interfaces;
-using Tiquicia_Lodge.Services;
+using Tiquicia_Lodge.Domain.Entities;
+using Tiquicia_Lodge.Application.Interfaces;
+using Tiquicia_Lodge.Application.Services;
+using Tiquicia_Lodge.Domain.Interfaces;
+using Tiquicia_Lodge.Infrastructure.Repositories;
+using Tiquicia_Lodge.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,12 +17,20 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Inyección de dependencias de los Servicios
+// Inyección de dependencias de Repositorios y Servicios
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IPropiedadService, PropiedadService>();
 builder.Services.AddScoped<IReservaService, ReservaService>();
 builder.Services.AddScoped<IPagoService, PagoService>();
 builder.Services.AddScoped<ICalificacionPropiedadService, CalificacionPropiedadService>();
+
+// Nuevos Servicios
+builder.Services.AddScoped<IEstadoService, EstadoService>();
+builder.Services.AddScoped<IFotosPropiedadService, FotosPropiedadService>();
+builder.Services.AddScoped<IPropiedadServiciosService, PropiedadServiciosService>();
+builder.Services.AddScoped<IProvinciasService, ProvinciasService>();
+builder.Services.AddScoped<IRolesService, RolesService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,16 @@
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\bin\Debug\net10.0\Tiquicia_Lodge.Application.deps.json
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\bin\Debug\net10.0\Tiquicia_Lodge.Application.dll
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\bin\Debug\net10.0\Tiquicia_Lodge.Application.pdb
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\bin\Debug\net10.0\Tiquicia_Lodge.Domain.dll
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\bin\Debug\net10.0\Tiquicia_Lodge.Domain.pdb
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.csproj.AssemblyReference.cache
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.AssemblyInfoInputs.cache
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.AssemblyInfo.cs
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.csproj.CoreCompileInputs.cache
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.sourcelink.json
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia.2A55450D.Up2Date
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.dll
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\refint\Tiquicia_Lodge.Application.dll
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\Tiquicia_Lodge.Application.pdb
+C:\Users\esteb\Desktop\Tiquicia_Lodge\Tiquicia_Lodge.Application\obj\Debug\net10.0\ref\Tiquicia_Lodge.Application.dll

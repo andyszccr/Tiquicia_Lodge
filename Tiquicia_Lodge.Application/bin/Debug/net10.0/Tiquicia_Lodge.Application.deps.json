@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Tiquicia_Lodge.Application/1.0.0": {
+        "dependencies": {
+          "Tiquicia_Lodge.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Tiquicia_Lodge.Application.dll": {}
+        }
+      },
+      "Tiquicia_Lodge.Domain/1.0.0": {
+        "runtime": {
+          "Tiquicia_Lodge.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tiquicia_Lodge.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tiquicia_Lodge.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="Tiquicia_Lodge.Domain\Tiquicia_Lodge.Domain.csproj" />
+  <Project Path="Tiquicia_Lodge.Application\Tiquicia_Lodge.Application.csproj" />
+  <Project Path="Tiquicia_Lodge.Infrastructure\Tiquicia_Lodge.Infrastructure.csproj" />
   <Project Path="Tiquicia_Lodge\Tiquicia_Lodge.csproj" />
 </Solution>

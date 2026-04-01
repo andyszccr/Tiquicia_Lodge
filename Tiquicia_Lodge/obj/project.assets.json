@@ -1555,6 +1555,44 @@
             "rid": "win"
           }
         }
+      },
+      "Tiquicia_Lodge.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Tiquicia_Lodge.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tiquicia_Lodge.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tiquicia_Lodge.Application.dll": {}
+        }
+      },
+      "Tiquicia_Lodge.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Tiquicia_Lodge.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tiquicia_Lodge.Domain.dll": {}
+        }
+      },
+      "Tiquicia_Lodge.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
+          "Tiquicia_Lodge.Application": "1.0.0",
+          "Tiquicia_Lodge.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tiquicia_Lodge.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tiquicia_Lodge.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -4180,6 +4218,21 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Tiquicia_Lodge.Application/1.0.0": {
+      "type": "project",
+      "path": "../Tiquicia_Lodge.Application/Tiquicia_Lodge.Application.csproj",
+      "msbuildProject": "../Tiquicia_Lodge.Application/Tiquicia_Lodge.Application.csproj"
+    },
+    "Tiquicia_Lodge.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Tiquicia_Lodge.Domain/Tiquicia_Lodge.Domain.csproj",
+      "msbuildProject": "../Tiquicia_Lodge.Domain/Tiquicia_Lodge.Domain.csproj"
+    },
+    "Tiquicia_Lodge.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Tiquicia_Lodge.Infrastructure/Tiquicia_Lodge.Infrastructure.csproj",
+      "msbuildProject": "../Tiquicia_Lodge.Infrastructure/Tiquicia_Lodge.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4187,7 +4240,10 @@
       "Microsoft.EntityFrameworkCore.Design >= 10.0.0-*",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.0-*",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.0-*",
-      "Swashbuckle.AspNetCore >= 10.1.4"
+      "Swashbuckle.AspNetCore >= 10.1.4",
+      "Tiquicia_Lodge.Application >= 1.0.0",
+      "Tiquicia_Lodge.Domain >= 1.0.0",
+      "Tiquicia_Lodge.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4222,7 +4278,17 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Application\\Tiquicia_Lodge.Application.csproj": {
+              "projectPath": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Application\\Tiquicia_Lodge.Application.csproj"
+            },
+            "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\Tiquicia_Lodge.Domain.csproj": {
+              "projectPath": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\Tiquicia_Lodge.Domain.csproj"
+            },
+            "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Infrastructure\\Tiquicia_Lodge.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Infrastructure\\Tiquicia_Lodge.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4235,7 +4301,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -4277,7 +4343,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

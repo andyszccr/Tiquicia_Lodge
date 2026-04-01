@@ -13,10 +13,10 @@ namespace Tiquicia_Lodge.Models
         
         public int IdReserva { get; set; }
         
-        [Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")] // Colones (ajustar el valor )
         public decimal Monto_CRC { get; set; }
         
-        [Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")] // Dólares
         public decimal? MontoUSD { get; set; }
         
         public DateTime? FechaPago { get; set; }
@@ -27,7 +27,7 @@ namespace Tiquicia_Lodge.Models
         [MaxLength(20)]
         public string EstadoPago { get; set; }
         
-        [MaxLength(500)]
+        [Column(TypeName = "varchar(max)")]
         public string ComprobanteURL { get; set; }
         
         public int? TelefonoSINPE { get; set; }

@@ -10,7 +10,10 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "10.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
-          "Swashbuckle.AspNetCore": "10.1.4"
+          "Swashbuckle.AspNetCore": "10.1.4",
+          "Tiquicia_Lodge.Application": "1.0.0",
+          "Tiquicia_Lodge.Domain": "1.0.0",
+          "Tiquicia_Lodge.Infrastructure": "1.0.0"
         },
         "runtime": {
           "Tiquicia_Lodge.dll": {}
@@ -902,6 +905,38 @@
             "fileVersion": "9.0.24.52809"
           }
         }
+      },
+      "Tiquicia_Lodge.Application/1.0.0": {
+        "dependencies": {
+          "Tiquicia_Lodge.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Tiquicia_Lodge.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Tiquicia_Lodge.Domain/1.0.0": {
+        "runtime": {
+          "Tiquicia_Lodge.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Tiquicia_Lodge.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
+          "Tiquicia_Lodge.Application": "1.0.0",
+          "Tiquicia_Lodge.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Tiquicia_Lodge.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1302,6 +1337,21 @@
       "sha512": "sha512-U9msthvnH2Fsw7xwAvIhNHOdnIjOQTwOc8Vd0oGOsiRcGMGoBFlUD6qtYawRUoQdKH9ysxesZ9juFElt1Jw/7A==",
       "path": "system.windows.extensions/9.0.0",
       "hashPath": "system.windows.extensions.9.0.0.nupkg.sha512"
+    },
+    "Tiquicia_Lodge.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tiquicia_Lodge.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tiquicia_Lodge.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
