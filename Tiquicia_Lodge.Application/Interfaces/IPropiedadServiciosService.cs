@@ -7,9 +7,9 @@ namespace Tiquicia_Lodge.Application.Interfaces
     public interface IPropiedadServiciosService
     {
         Task<IEnumerable<PropiedadServicios>> GetAllAsync();
-        Task<PropiedadServicios?> GetByIdAsync(int id);
+        Task<PropiedadServicios?> GetByKeysAsync(int idPropiedad, int idServicio);
         Task<PropiedadServicios> CreateAsync(PropiedadServicios entity);
         Task UpdateAsync(PropiedadServicios entity);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(int idPropiedad, int idServicio);
     }
 }

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +8,7 @@ namespace Tiquicia_Lodge.Domain.Entities
     public class Usuario
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)] // En SQL decía NOT NULL pero sin IDENTITY
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdUsuario { get; set; }
         
         [Required, MaxLength(100)]
@@ -19,7 +18,7 @@ namespace Tiquicia_Lodge.Domain.Entities
         public string PrimerApellido { get; set; }
         
         [MaxLength(100)]
-        public string SegundoApellido { get; set; }
+        public string? SegundoApellido { get; set; }
         
         [Required, MaxLength(100), EmailAddress]
         public string Correo { get; set; }
@@ -35,7 +34,7 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int? IdDistrito { get; set; }
         public DateTime? FechaNacimiento { get; set; }
         
-        public string Genero { get; set; }
+        public string? Genero { get; set; }
         public int IdRol { get; set; }
         public int IdEstado { get; set; }
         public DateTime? FechaRegistro { get; set; }
@@ -44,9 +43,9 @@ namespace Tiquicia_Lodge.Domain.Entities
         public bool? TelefonoConfirmado { get; set; }
         
         [Column(TypeName = "varchar(max)")]
-        public string FotoPerfil { get; set; }
+        public string? FotoPerfil { get; set; }
         
         [MaxLength(500)]
-        public string NotasInternas { get; set; }
+        public string? NotasInternas { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Tiquicia_Lodge.Application.Interfaces;
 using Tiquicia_Lodge.Domain.Entities;

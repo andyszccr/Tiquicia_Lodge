@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,13 +20,13 @@ namespace Tiquicia_Lodge.Domain.Entities
         public string NombrePropiedad { get; set; }
         
         [MaxLength(500)]
-        public string TituloPromocional { get; set; }
+        public string? TituloPromocional { get; set; }
         
         [Required, MaxLength(2000)]
         public string DescripcionLarga { get; set; }
         
         [MaxLength(300)]
-        public string DescripcionCorta { get; set; }
+        public string? DescripcionCorta { get; set; }
         
         [Required, MaxLength(300)]
         public string UbicacionDetallada { get; set; }

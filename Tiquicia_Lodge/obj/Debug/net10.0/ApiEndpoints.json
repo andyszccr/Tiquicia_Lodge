@@ -1028,14 +1028,35 @@
   },
   {
     "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
+    "Method": "Put",
+    "RelativePath": "api/PropiedadEquipamiento",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadEquipamiento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
     "Method": "Get",
-    "RelativePath": "api/PropiedadEquipamiento/{id}",
+    "RelativePath": "api/PropiedadEquipamiento/{idPropiedad}/{idEquipamiento}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idPropiedad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idEquipamiento",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1054,35 +1075,19 @@
   },
   {
     "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
-    "Method": "Put",
-    "RelativePath": "api/PropiedadEquipamiento/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "entity",
-        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadEquipamiento",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadEquipamientoController",
     "Method": "Delete",
-    "RelativePath": "api/PropiedadEquipamiento/{id}",
+    "RelativePath": "api/PropiedadEquipamiento/{idPropiedad}/{idEquipamiento}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idPropiedad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idEquipamiento",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1246,14 +1251,35 @@
   },
   {
     "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
+    "Method": "Put",
+    "RelativePath": "api/PropiedadReglas",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadReglas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
     "Method": "Get",
-    "RelativePath": "api/PropiedadReglas/{id}",
+    "RelativePath": "api/PropiedadReglas/{idPropiedad}/{idRegla}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idPropiedad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idRegla",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1272,35 +1298,19 @@
   },
   {
     "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
-    "Method": "Put",
-    "RelativePath": "api/PropiedadReglas/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "entity",
-        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadReglas",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadReglasController",
     "Method": "Delete",
-    "RelativePath": "api/PropiedadReglas/{id}",
+    "RelativePath": "api/PropiedadReglas/{idPropiedad}/{idRegla}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idPropiedad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idRegla",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1355,14 +1365,35 @@
   },
   {
     "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
+    "Method": "Put",
+    "RelativePath": "api/PropiedadServicios",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadServicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
     "Method": "Get",
-    "RelativePath": "api/PropiedadServicios/{id}",
+    "RelativePath": "api/PropiedadServicios/{idPropiedad}/{idServicio}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idPropiedad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idServicio",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1381,35 +1412,19 @@
   },
   {
     "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
-    "Method": "Put",
-    "RelativePath": "api/PropiedadServicios/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "entity",
-        "Type": "Tiquicia_Lodge.Domain.Entities.PropiedadServicios",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Tiquicia_Lodge.Controllers.PropiedadServiciosController",
     "Method": "Delete",
-    "RelativePath": "api/PropiedadServicios/{id}",
+    "RelativePath": "api/PropiedadServicios/{idPropiedad}/{idServicio}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idPropiedad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idServicio",
         "Type": "System.Int32",
         "IsRequired": true
       }

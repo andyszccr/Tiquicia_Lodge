@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Tiquicia_Lodge.Application.Interfaces;
 using Tiquicia_Lodge.Domain.Entities;
@@ -20,9 +20,9 @@ namespace Tiquicia_Lodge.Application.Services
             return await _repository.GetAllAsync();
         }
 
-        public async Task<PropiedadEquipamiento?> GetByIdAsync(int id)
+        public async Task<PropiedadEquipamiento?> GetByKeysAsync(int idPropiedad, int idEquipamiento)
         {
-            return await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(idPropiedad, idEquipamiento);
         }
 
         public async Task<PropiedadEquipamiento> CreateAsync(PropiedadEquipamiento entity)
@@ -35,9 +35,9 @@ namespace Tiquicia_Lodge.Application.Services
             await _repository.UpdateAsync(entity);
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int idPropiedad, int idEquipamiento)
         {
-            await _repository.DeleteAsync(id);
+            await _repository.DeleteAsync(idPropiedad, idEquipamiento);
         }
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -42,9 +42,9 @@ namespace Tiquicia_Lodge.Domain.Entities
         public DateTime? FechaReserva { get; set; }
         
         [MaxLength(500)]
-        public string NotasCliente { get; set; }
+        public string? NotasCliente { get; set; }
         
         [MaxLength(500)]
-        public string NotasInternas { get; set; }
+        public string? NotasInternas { get; set; }
     }
 }

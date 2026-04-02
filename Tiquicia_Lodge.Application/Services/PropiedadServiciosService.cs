@@ -20,9 +20,9 @@ namespace Tiquicia_Lodge.Application.Services
             return await _repository.GetAllAsync();
         }
 
-        public async Task<PropiedadServicios?> GetByIdAsync(int id)
+        public async Task<PropiedadServicios?> GetByKeysAsync(int idPropiedad, int idServicio)
         {
-            return await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(idPropiedad, idServicio);
         }
 
         public async Task<PropiedadServicios> CreateAsync(PropiedadServicios entity)
@@ -35,9 +35,9 @@ namespace Tiquicia_Lodge.Application.Services
             await _repository.UpdateAsync(entity);
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int idPropiedad, int idServicio)
         {
-            await _repository.DeleteAsync(id);
+            await _repository.DeleteAsync(idPropiedad, idServicio);
         }
     }
 }

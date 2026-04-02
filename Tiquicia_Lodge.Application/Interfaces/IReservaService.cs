@@ -8,8 +8,8 @@ namespace Tiquicia_Lodge.Application.Interfaces
     {
         Task<IEnumerable<Reserva>> GetAllAsync();
         Task<Reserva?> GetByIdAsync(int id);
-        Task<Reserva> CreateAsync(Reserva reserva);
-        Task UpdateAsync(Reserva reserva);
+        Task<Reserva> CreateAsync(Reserva entity);
+        Task UpdateAsync(Reserva entity);
         Task DeleteAsync(int id);
     }
 }
