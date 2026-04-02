@@ -1752,16 +1752,54 @@
             }
           }
         }
+      },
+      "put": {
+        "tags": [
+          "PropiedadEquipamiento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadEquipamiento"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadEquipamiento"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadEquipamiento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
-    "/api/PropiedadEquipamiento/{id}": {
+    "/api/PropiedadEquipamiento/{idPropiedad}/{idEquipamiento}": {
       "get": {
         "tags": [
           "PropiedadEquipamiento"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idPropiedad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idEquipamiento",
             "in": "path",
             "required": true,
             "schema": {
@@ -1793,53 +1831,22 @@
           }
         }
       },
-      "put": {
-        "tags": [
-          "PropiedadEquipamiento"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadEquipamiento"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadEquipamiento"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadEquipamiento"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "delete": {
         "tags": [
           "PropiedadEquipamiento"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idPropiedad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idEquipamiento",
             "in": "path",
             "required": true,
             "schema": {
@@ -2122,16 +2129,54 @@
             }
           }
         }
+      },
+      "put": {
+        "tags": [
+          "PropiedadReglas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadReglas"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadReglas"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadReglas"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
-    "/api/PropiedadReglas/{id}": {
+    "/api/PropiedadReglas/{idPropiedad}/{idRegla}": {
       "get": {
         "tags": [
           "PropiedadReglas"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idPropiedad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idRegla",
             "in": "path",
             "required": true,
             "schema": {
@@ -2163,53 +2208,22 @@
           }
         }
       },
-      "put": {
-        "tags": [
-          "PropiedadReglas"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadReglas"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadReglas"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadReglas"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "delete": {
         "tags": [
           "PropiedadReglas"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idPropiedad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idRegla",
             "in": "path",
             "required": true,
             "schema": {
@@ -2307,16 +2321,54 @@
             }
           }
         }
+      },
+      "put": {
+        "tags": [
+          "PropiedadServicios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadServicios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadServicios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropiedadServicios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
-    "/api/PropiedadServicios/{id}": {
+    "/api/PropiedadServicios/{idPropiedad}/{idServicio}": {
       "get": {
         "tags": [
           "PropiedadServicios"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idPropiedad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idServicio",
             "in": "path",
             "required": true,
             "schema": {
@@ -2348,53 +2400,22 @@
           }
         }
       },
-      "put": {
-        "tags": [
-          "PropiedadServicios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadServicios"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadServicios"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PropiedadServicios"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "delete": {
         "tags": [
           "PropiedadServicios"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "idPropiedad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idServicio",
             "in": "path",
             "required": true,
             "schema": {
@@ -4572,8 +4593,8 @@
             "nullable": true
           },
           "telefonoSINPE": {
-            "type": "integer",
-            "format": "int32",
+            "maxLength": 20,
+            "type": "string",
             "nullable": true
           },
           "referenciaBanco": {

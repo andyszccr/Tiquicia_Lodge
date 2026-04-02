@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Tiquicia_Lodge.Domain.Interfaces;
@@ -22,9 +22,9 @@ namespace Tiquicia_Lodge.Infrastructure.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T?> GetByIdAsync(int id)
+        public async Task<T?> GetByIdAsync(params object[] keyValues)
         {
-            return await _dbSet.FindAsync(id);
+            return await _dbSet.FindAsync(keyValues);
         }
 
         public async Task<T> CreateAsync(T entity)
@@ -40,9 +40,9 @@ namespace Tiquicia_Lodge.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(params object[] keyValues)
         {
-            var entity = await _dbSet.FindAsync(id);
+            var entity = await _dbSet.FindAsync(keyValues);
             if (entity != null)
             {
                 _dbSet.Remove(entity);

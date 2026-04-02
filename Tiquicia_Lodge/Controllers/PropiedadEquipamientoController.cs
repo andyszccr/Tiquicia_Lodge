@@ -24,10 +24,10 @@ namespace Tiquicia_Lodge.Controllers
             return Ok(data);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<PropiedadEquipamiento>> Get(int id)
+        [HttpGet("{idPropiedad}/{idEquipamiento}")]
+        public async Task<ActionResult<PropiedadEquipamiento>> Get(int idPropiedad, int idEquipamiento)
         {
-            var data = await _service.GetByIdAsync(id);
+            var data = await _service.GetByKeysAsync(idPropiedad, idEquipamiento);
             if (data == null) return NotFound();
             return Ok(data);
         }
@@ -36,20 +36,20 @@ namespace Tiquicia_Lodge.Controllers
         public async Task<ActionResult<PropiedadEquipamiento>> Post([FromBody] PropiedadEquipamiento entity)
         {
             await _service.CreateAsync(entity);
-            return CreatedAtAction(nameof(Get), new { id = 1 }, entity);
+            return Ok(entity);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] PropiedadEquipamiento entity)
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] PropiedadEquipamiento entity)
         {
             await _service.UpdateAsync(entity);
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete("{idPropiedad}/{idEquipamiento}")]
+        public async Task<IActionResult> Delete(int idPropiedad, int idEquipamiento)
         {
-            await _service.DeleteAsync(id);
+            await _service.DeleteAsync(idPropiedad, idEquipamiento);
             return NoContent();
         }
     }
