@@ -256,7 +256,7 @@ dotnet ef database update \
 
 ## Pendientes y Roadmap
 
-Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los siguientes modulos y funcionalidades para completar el ecosistema de Tiquicia Lodge:
+Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los siguientes modulos y funcionalidades para completar el ecosistema de Tiquicia Lodge(obviamente se tiene que cargar el diagrama en el sql server):
 
 ### Modulo de Auditoria y Logs
 - [ ] `BitacoraAcciones`: Seguimiento de acciones de usuarios.
