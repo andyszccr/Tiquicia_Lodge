@@ -49,6 +49,17 @@ builder.Services.AddScoped<IPoliticasCancelacionService, PoliticasCancelacionSer
 builder.Services.AddScoped<IComerciosCercanosService, ComerciosCercanosService>();
 builder.Services.AddScoped<ITransporteCercanoService, TransporteCercanoService>();
 
+// Fase 5: Soporte y Marketing
+builder.Services.AddScoped<ITicketsSoporteService, TicketsSoporteService>();
+builder.Services.AddScoped<IMensajesSoporteService, MensajesSoporteService>();
+builder.Services.AddScoped<IReportesService, ReportesService>();
+builder.Services.AddScoped<IEvidenciasReporteService, EvidenciasReporteService>();
+builder.Services.AddScoped<ICategoriasFAQService, CategoriasFAQService>();
+builder.Services.AddScoped<IFAQsService, FAQsService>();
+builder.Services.AddScoped<INewsletterSuscriptoresService, NewsletterSuscriptoresService>();
+builder.Services.AddScoped<IPromocionesService, PromocionesService>();
+builder.Services.AddScoped<IPromocionesPropiedadService, PromocionesPropiedadService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
