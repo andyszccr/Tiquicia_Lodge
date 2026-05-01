@@ -22,16 +22,16 @@ Backend REST API para la plataforma **Tiquicia Lodge**, un sistema de gestión d
 Tiquicia_Lodge/
 │
 ├── Tiquicia_Lodge/                    # Capa de Presentacion (API)
-│   ├── Controllers/                   # 23 controladores REST
+│   ├── Controllers/                   # 32 controladores REST
 │   ├── Program.cs                     # Punto de entrada, DI container
 │   └── appsettings.json               # Configuracion y cadena de conexion
 │
 ├── Tiquicia_Lodge.Application/        # Capa de Aplicacion
-│   ├── Interfaces/                    # Contratos de servicios (23 interfaces)
+│   ├── Interfaces/                    # Contratos de servicios (32 interfaces)
 │   └── Services/                      # Implementacion de logica de negocio
 │
 ├── Tiquicia_Lodge.Domain/             # Capa de Dominio
-│   ├── Entities/                      # 23 entidades del modelo de datos
+│   ├── Entities/                      # 32 entidades del modelo de datos
 │   └── Interfaces/                    # IRepository<T> generico
 │
 └── Tiquicia_Lodge.Infrastructure/     # Capa de Infraestructura
@@ -81,6 +81,25 @@ Tiquicia_Lodge/
 | `ComerciosCercanos` | `ComerciosCercanos` | Negocios cercanos a la propiedad |
 | `TransporteCercano` | `TransporteCercano` | Opciones de transporte cercano |
 | `PropiedadServicios` | `PropiedadServicios` | Servicios incluidos por propiedad |
+
+### Modulo de Soporte Tecnico
+
+| Entidad | Tabla SQL | Descripcion |
+|---|---|---|
+| `TicketsSoporte` | `TicketsSoporte` | Sistema de tickets de ayuda |
+| `MensajesSoporte` | `MensajesSoporte` | Mensajes internos de los tickets |
+| `Reportes` | `Reportes` | Denuncias de usuarios o propiedades |
+| `EvidenciasReporte` | `EvidenciasReporte` | Archivos adjuntos a los reportes |
+| `CategoriasFAQ` | `CategoriasFAQ` | Categorias de preguntas frecuentes |
+| `FAQs` | `FAQs` | Preguntas y respuestas frecuentes |
+
+### Modulo de Marketing y Comunicacion
+
+| Entidad | Tabla SQL | Descripcion |
+|---|---|---|
+| `NewsletterSuscriptores` | `NewsletterSuscriptores` | Gestion de suscriptores al boletin |
+| `Promociones` | `Promociones` | Ofertas y descuentos globales |
+| `PromocionesPropiedad` | `PromocionesPropiedad` | Relacion promocion-propiedad |
 
 ---
 
@@ -205,7 +224,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IPropiedadService, PropiedadService>();
 builder.Services.AddScoped<IReservaService, ReservaService>();
-// ... (23 servicios en total)
+// ... (32 servicios en total registrados en Program.cs)
 ```
 
 > [!TIP]
@@ -231,6 +250,9 @@ modelBuilder.Entity<PropiedadEquipamiento>()
 
 modelBuilder.Entity<PropiedadReglas>()
     .HasKey(pr => new { pr.IdPropiedad, pr.IdRegla });
+
+modelBuilder.Entity<PromocionesPropiedad>()
+    .HasKey(pp => new { pp.IdPromocion, pp.IdPropiedad });
 ```
 
 ---
@@ -286,10 +308,15 @@ Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los
 - [ ] `Reembolsos`: Gestion de devoluciones monetarias.
 - [ ] `PlanesProveedor`: Diferentes niveles de suscripcion para dueños de lodges.
 
-### Modulo de Soporte Tecnico
-- [ ] `TicketsSoporte` y `MensajesSoporte`: Sistema de mensajeria interna.
-- [ ] `FAQs`: Centro de ayuda dinamico.
-- [ ] `Reportes` y `EvidenciasReporte`: Gestion de quejas y denuncias.
+### Modulo de Soporte Tecnico (Completado)
+- [x] `TicketsSoporte` y `MensajesSoporte`: Sistema de mensajeria interna.
+- [x] `FAQs`: Centro de ayuda dinamico.
+- [x] `Reportes` y `EvidenciasReporte`: Gestion de quejas y denuncias.
+- [x] `CategoriasFAQ`: Clasificacion de ayuda.
+
+### Modulo de Marketing (Completado)
+- [x] `NewsletterSuscriptores`: Gestion de suscriptores.
+- [x] `Promociones` y `PromocionesPropiedad`: Sistema de ofertas.
 
 ### Modulo de Verificacion y Confianza
 - [ ] `SellosConfianza`: Insignias para propiedades destacadas.
