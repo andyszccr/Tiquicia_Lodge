@@ -332,3 +332,17 @@ Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los
 
 ---
 
+## Bitacora de Cambios e Implementacion
+
+### Actualizacion Fase 5 (Mayo 2026)
+**Problemas Técnicos Resueltos:**
+*   **Error CS1061 (Build Failure)**: Durante la implementación de los servicios de soporte, se utilizó erróneamente el método `AddAsync`. El compilador falló debido a que la interfaz `IRepository<T>` define el método de creación como `CreateAsync`.
+    *   *Solución*: Se realizó una refactorización masiva de los 9 servicios (`TicketsSoporteService`, `FAQsService`, etc.) para sincronizarlos con la firma correcta del repositorio.
+
+**Observaciones de Arquitectura y Faltantes:**
+*   **Propiedades de Navegación (Crítico)**: Actualmente, las entidades C# solo contienen los IDs de las llaves foráneas. Se recomienda agregar propiedades `virtual` (ej: `public virtual Usuario Proveedor { get; set; }`) para permitir el uso de `.Include()` en Entity Framework y evitar consultas N+1.
+*   **Consistencia de Identidad**: Algunas tablas en el SQL no usan `IDENTITY` pero en el código se marcaron como tales por error en versiones previas. Se ha estabilizado la entidad `Usuario` con `DatabaseGeneratedOption.None` para respetar el flujo del SQL original.
+*   **Datos Base**: Las migraciones solo crean las tablas. Es obligatorio ejecutar el script `PuraVida.sql` para poblar los catálogos base (Estados, Roles, Provincias) antes de usar la API.
+
+---
+
