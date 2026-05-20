@@ -1,11 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Tiquicia_Lodge.Domain.Entities {
     public class FotosPropiedad {
         [Key]
         public int IdFoto { get; set; }
         [Required]
         public int IdPropiedad { get; set; }
+
+        [ForeignKey("IdPropiedad")]
+        public virtual Propiedad Propiedad { get; set; } = null!;
         [Required, MaxLength(500)]
         public string UrlFoto { get; set; }
         [MaxLength(200)]

@@ -60,6 +60,14 @@ builder.Services.AddScoped<INewsletterSuscriptoresService, NewsletterSuscriptore
 builder.Services.AddScoped<IPromocionesService, PromocionesService>();
 builder.Services.AddScoped<IPromocionesPropiedadService, PromocionesPropiedadService>();
 
+// Módulo Geográfico y Filtros de Búsqueda
+builder.Services.AddScoped<IZonasTicasService, ZonasTicasService>();
+builder.Services.AddScoped<ICantonesService, CantonesService>();
+builder.Services.AddScoped<IDistritosService, DistritosService>();
+builder.Services.AddScoped<INacionalidadesService, NacionalidadesService>();
+builder.Services.AddScoped<IListasDeseosService, ListasDeseosService>();
+builder.Services.AddScoped<IListaPropiedadesService, ListaPropiedadesService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

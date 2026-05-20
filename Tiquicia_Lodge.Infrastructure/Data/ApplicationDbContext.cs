@@ -49,6 +49,14 @@ namespace Tiquicia_Lodge.Infrastructure.Data
         public DbSet<Promociones> Promociones { get; set; }
         public DbSet<PromocionesPropiedad> PromocionesPropiedad { get; set; }
 
+        // Módulo Geográfico y Filtros de Búsqueda
+        public DbSet<ZonasTicas> ZonasTicas { get; set; }
+        public DbSet<Cantones> Cantones { get; set; }
+        public DbSet<Distritos> Distritos { get; set; }
+        public DbSet<Nacionalidades> Nacionalidades { get; set; }
+        public DbSet<ListasDeseos> ListasDeseos { get; set; }
+        public DbSet<ListaPropiedades> ListaPropiedades { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -64,6 +72,9 @@ namespace Tiquicia_Lodge.Infrastructure.Data
 
             modelBuilder.Entity<PromocionesPropiedad>()
                 .HasKey(pp => new { pp.IdPromocion, pp.IdPropiedad });
+
+            modelBuilder.Entity<ListaPropiedades>()
+                .HasKey(lp => new { lp.IdLista, lp.IdPropiedad });
         }
     }
 }

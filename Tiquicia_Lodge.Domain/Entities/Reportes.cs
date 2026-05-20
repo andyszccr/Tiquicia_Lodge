@@ -29,6 +29,9 @@ namespace Tiquicia_Lodge.Domain.Entities
 
         public int IdEstado { get; set; }
 
+        [ForeignKey("IdEstado")]
+        public virtual Estado Estado { get; set; } = null!;
+
         [MaxLength(500)]
         public string? Resolucion { get; set; }
 

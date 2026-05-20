@@ -13,6 +13,9 @@ namespace Tiquicia_Lodge.Domain.Entities
 
         public int IdUsuario { get; set; }
 
+        [ForeignKey("IdUsuario")]
+        public virtual Usuario Usuario { get; set; } = null!;
+
         [Required, MaxLength(200)]
         public string Asunto { get; set; }
 
@@ -20,6 +23,9 @@ namespace Tiquicia_Lodge.Domain.Entities
         public string Descripcion { get; set; }
 
         public int IdEstado { get; set; }
+
+        [ForeignKey("IdEstado")]
+        public virtual Estado Estado { get; set; } = null!;
 
         [MaxLength(20)]
         public string? Prioridad { get; set; }

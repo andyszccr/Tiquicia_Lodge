@@ -291,9 +291,11 @@ Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los
 - [ ] `NewsletterSuscriptores`: Gestion de correos para marketing.
 - [ ] `Promociones` y `PromocionesPropiedad`: Sistema de ofertas temporales.
 
-### Modulo Geografico Completo
-- [ ] `Cantones` y `Distritos`: Division administrativa detallada de Costa Rica.
-- [ ] `ZonasTicas`: Clasificacion por zonas turisticas (Pacifico, Caribe, etc.).
+### Modulo Geografico Completo (Completado)
+- [x] `Cantones` y `Distritos`: Division administrativa detallada de Costa Rica.
+- [x] `ZonasTicas`: Clasificacion por zonas turisticas (Pacifico, Caribe, etc.).
+- [x] `Nacionalidades`: Catálogo de nacionalidades para el perfil de huéspedes.
+- [x] `ListasDeseos` y `ListaPropiedades`: Favoritos de usuarios.
 
 ### Modulo de Catalogo y Multimedia Extendido
 - [ ] Categorias: `CategoriaAlojamiento`, `CategoriaEquipamiento`, `CategoriaExperiencia`, `CategoriaServicio`.
@@ -339,8 +341,8 @@ Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los
 *   **Error CS1061 (Build Failure)**: Durante la implementación de los servicios de soporte, se utilizó erróneamente el método `AddAsync`. El compilador falló debido a que la interfaz `IRepository<T>` define el método de creación como `CreateAsync`.
     *   *Solución*: Se realizó una refactorización masiva de los 9 servicios (`TicketsSoporteService`, `FAQsService`, etc.) para sincronizarlos con la firma correcta del repositorio.
 
-**Observaciones de Arquitectura y Faltantes:**
-*   **Propiedades de Navegación (Crítico)**: Actualmente, las entidades C# solo contienen los IDs de las llaves foráneas. Se recomienda agregar propiedades `virtual` (ej: `public virtual Usuario Proveedor { get; set; }`) para permitir el uso de `.Include()` en Entity Framework y evitar consultas N+1.
+**Problemas de Arquitectura y Relaciones Resueltos (Capa 8):**
+*   **Integridad Referencial y Propiedades de Navegación (Resuelto)**: Existía un grave problema de "capa 8" donde la base de datos SQL no poseía restricciones `FOREIGN KEY` físicas y las entidades C# carecían de propiedades `virtual` de navegación. Esto se solucionó masivamente inyectando atributos `[ForeignKey]` en las 38 entidades activas y anexando `ALTER TABLE` a `PuraVida.sql`, permitiendo que EF Core realice uniones JOIN (con `.Include()`) y asegurando la integridad relacional de toda la plataforma.
 *   **Consistencia de Identidad**: Algunas tablas en el SQL no usan `IDENTITY` pero en el código se marcaron como tales por error en versiones previas. Se ha estabilizado la entidad `Usuario` con `DatabaseGeneratedOption.None` para respetar el flujo del SQL original.
 *   **Datos Base**: Las migraciones solo crean las tablas. Es obligatorio ejecutar el script `PuraVida.sql` para poblar los catálogos base (Estados, Roles, Provincias) antes de usar la API.
 

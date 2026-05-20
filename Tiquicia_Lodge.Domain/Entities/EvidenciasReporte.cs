@@ -13,6 +13,9 @@ namespace Tiquicia_Lodge.Domain.Entities
 
         public int IdReporte { get; set; }
 
+        [ForeignKey("IdReporte")]
+        public virtual Reportes Reporte { get; set; } = null!;
+
         [MaxLength(30)]
         public string? TipoEvidencia { get; set; }
 

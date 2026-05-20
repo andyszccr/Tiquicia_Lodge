@@ -15,6 +15,9 @@ namespace Tiquicia_Lodge.Domain.Entities
 
         public int IdUsuario { get; set; }
 
+        [ForeignKey("IdUsuario")]
+        public virtual Usuario Usuario { get; set; } = null!;
+
         [Required, MaxLength(1000)]
         public string Mensaje { get; set; }
 

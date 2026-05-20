@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Qex+dVYCgTc=",
+=======
+  "dgSpecHash": "1Qy3zN8DiP8=",
+>>>>>>> 790dc7b (feat: implementar módulo geográfico y aplicar integridad referencial global)
   "success": true,
   "projectFilePath": "D:\\Documentos\\01 Inovatry Solutions\\Tiquicia_Lodge\\Tiquicia_Lodge.Application\\Tiquicia_Lodge.Application.csproj",
   "expectedPackageFiles": [],

@@ -27,16 +27,28 @@ namespace Tiquicia_Lodge.Domain.Entities
         public string Contrasena { get; set; }
         
         public int IdNacionalidad { get; set; }
+
+        [ForeignKey("IdNacionalidad")]
+        public virtual Nacionalidades Nacionalidade { get; set; } = null!;
         
         [Required, MaxLength(300)]
         public string Direccion { get; set; }
         
         public int? IdDistrito { get; set; }
+
+        [ForeignKey("IdDistrito")]
+        public virtual Distritos? Distrito { get; set; }
         public DateTime? FechaNacimiento { get; set; }
         
         public string? Genero { get; set; }
         public int IdRol { get; set; }
+
+        [ForeignKey("IdRol")]
+        public virtual Roles Role { get; set; } = null!;
         public int IdEstado { get; set; }
+
+        [ForeignKey("IdEstado")]
+        public virtual Estado Estado { get; set; } = null!;
         public DateTime? FechaRegistro { get; set; }
         public DateTime? UltimoAcceso { get; set; }
         public bool? EmailConfirmado { get; set; }
