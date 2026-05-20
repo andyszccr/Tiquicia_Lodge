@@ -2,6 +2,8 @@
 
 Backend REST API para la plataforma **Tiquicia Lodge**, un sistema de gestión de alojamientos turísticos tipo Lodge desarrollado con .NET 10 y Clean Architecture.
 
+El modelo de datos completo (**88 tablas**) se documenta en [`PuraVidaDB/diccionario-de-datos.md`](PuraVidaDB/diccionario-de-datos.md); la API expone actualmente **38** modulos REST sobre la base `PV`.
+
 ---
 
 ## Tech Stack
@@ -10,9 +12,10 @@ Backend REST API para la plataforma **Tiquicia Lodge**, un sistema de gestión d
 |---|---|
 | Framework | .NET 10 / ASP.NET Core |
 | ORM | Entity Framework Core |
-| Base de datos | SQL Server (base de datos: `PV`) |
+| Base de datos | SQL Server (`PV` en runtime; esquema en `PuraVidaDB`) |
 | Documentacion API | Swagger / OpenAPI |
-| Arquitectura | Clean Architecture (4 capas) |
+| Documentacion BD | Diccionario de datos en `PuraVidaDB/` |
+| Arquitectura | Clean Architecture (4 capas + proyecto SSDT) |
 
 ---
 
@@ -22,22 +25,29 @@ Backend REST API para la plataforma **Tiquicia Lodge**, un sistema de gestión d
 Tiquicia_Lodge/
 │
 ├── Tiquicia_Lodge/                    # Capa de Presentacion (API)
-│   ├── Controllers/                   # 32 controladores REST
+│   ├── Controllers/                   # 38 controladores REST
 │   ├── Program.cs                     # Punto de entrada, DI container
 │   └── appsettings.json               # Configuracion y cadena de conexion
 │
 ├── Tiquicia_Lodge.Application/        # Capa de Aplicacion
-│   ├── Interfaces/                    # Contratos de servicios (32 interfaces)
+│   ├── Interfaces/                    # Contratos de servicios
 │   └── Services/                      # Implementacion de logica de negocio
 │
 ├── Tiquicia_Lodge.Domain/             # Capa de Dominio
-│   ├── Entities/                      # 32 entidades del modelo de datos
+│   ├── Entities/                      # 38 entidades expuestas por la API
 │   └── Interfaces/                    # IRepository<T> generico
 │
-└── Tiquicia_Lodge.Infrastructure/     # Capa de Infraestructura
-    ├── Data/                          # ApplicationDbContext (EF Core)
-    ├── Repositories/                  # Repository<T> generico
-    └── Migrations/                    # Migraciones de EF Core
+├── Tiquicia_Lodge.Infrastructure/     # Capa de Infraestructura
+│   ├── Data/                          # ApplicationDbContext (EF Core)
+│   ├── Repositories/                  # Repository<T> generico
+│   └── Migrations/                    # Migraciones de EF Core
+│
+├── PuraVidaDB/                        # Proyecto SSDT (esquema SQL Server)
+│   ├── dbo/Tables/                    # 88 tablas del modelo completo
+│   ├── PuraVidaDB.sqlproj
+│   └── diccionario-de-datos.md        # Diccionario de datos (documento principal)
+│
+└── PuraVida.sql                       # Script de despliegue y datos semilla
 ```
 
 ---
@@ -53,7 +63,7 @@ Tiquicia_Lodge/
 | `Reserva` | `Reservas` | Reservaciones de alojamiento |
 | `Pago` | `Pagos` | Transacciones y comprobantes |
 | `CalificacionPropiedad` | `CalificacionesPropiedad` | Resenas y puntuaciones |
-| `FotosPropiedad` | `FotosPropiedades` | Galeria de imagenes |
+| `FotosPropiedad` | `FotosPropiedad` | Galeria de imagenes |
 | `Estado` | `Estados` | Catálogo de estados del sistema |
 | `Roles` | `Roles` | Roles de usuario |
 | `Provincias` | `Provincias` | Catálogo geografico |
@@ -187,11 +197,17 @@ Editar `Tiquicia_Lodge/appsettings.json`:
 
 ### 3. Restaurar la base de datos
 
-Ejecutar el script SQL en SQL Server Management Studio:
+Opcion A — script completo (recomendado para desarrollo):
 
-```
+```text
 PuraVida.sql
 ```
+
+Ejecutar en SQL Server Management Studio contra una base llamada `PV` (o ajustar el nombre en `appsettings.json`).
+
+Opcion B — proyecto SSDT:
+
+Publicar el proyecto `PuraVidaDB` desde Visual Studio o SSDT hacia la instancia SQL Server. Luego ejecutar solo los scripts de datos semilla de `PuraVida.sql` si la publicacion no los incluye.
 
 > [!WARNING]
 > La migracion inicial de EF Core ya esta configurada como "baseline" (metodos `Up`/`Down` vacios). No ejecutes `dotnet ef database update` si la base de datos `PV` ya existe con datos, ya que podria generar conflictos de esquema.
@@ -224,7 +240,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IPropiedadService, PropiedadService>();
 builder.Services.AddScoped<IReservaService, ReservaService>();
-// ... (32 servicios en total registrados en Program.cs)
+// ... (38 servicios registrados en Program.cs)
 ```
 
 > [!TIP]
@@ -232,11 +248,33 @@ builder.Services.AddScoped<IReservaService, ReservaService>();
 
 ---
 
+## Documentacion de base de datos
+
+El esquema completo vive en el proyecto **PuraVidaDB** (`88` tablas en `dbo`). La API en .NET expone hoy **38** entidades; el resto del modelo esta documentado para implementacion futura.
+
+| Documento | Ubicacion | Formato | Uso recomendado |
+|---|---|---|---|
+| **Diccionario de datos** | [`PuraVidaDB/diccionario-de-datos.md`](PuraVidaDB/diccionario-de-datos.md) | Por tabla: Campo, Valor (tipo), Descripcion, Relacion | Referencia principal para analistas y desarrollo |
+| Diccionario consolidado v5 | [`PuraVidaDB/Diccionario-de-base-datosv5.md`](PuraVidaDB/Diccionario-de-base-datosv5.md) | Tabla unica con todas las columnas | Vista rapida o exportacion |
+| Diccionario detallado (legacy) | [`PuraVidaDB/diccionario-de-base-de-datos.md`](PuraVidaDB/diccionario-de-base-de-datos.md) | Seccion por tabla con PK/FK explicitas | Consulta tecnica de claves |
+
+Columnas del diccionario principal:
+
+- **Campo**: nombre de la columna.
+- **Valor**: tipo SQL (`VARCHAR`, `INT`, `BIT`, `DECIMAL`, `DATETIME`, `geography`, etc.).
+- **Descripcion**: funcion de negocio del campo.
+- **Relacion**: `Tabla.Columna` si es FK; vacio si no aplica.
+
+Los scripts fuente de cada tabla estan en `PuraVidaDB/dbo/Tables/*.sql`.
+
+---
+
 ## Base de Datos
 
 - **Motor**: SQL Server
-- **Nombre**: `PV`
-- **Script**: `PuraVida.sql` (incluido en la raiz del repositorio)
+- **Nombre en runtime (API)**: `PV`
+- **Proyecto de esquema**: `PuraVidaDB` (SSDT, incluido en `Tiquicia_Lodge.slnx`)
+- **Script monolitico**: `PuraVida.sql` (raiz: tablas, FK, datos semilla)
 - **ORM**: Entity Framework Core con Fluent API para llaves compuestas
 
 Configuracion de llaves compuestas en `ApplicationDbContext`:
@@ -278,7 +316,7 @@ dotnet ef database update \
 
 ## Pendientes y Roadmap
 
-Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los siguientes modulos y funcionalidades para completar el ecosistema de Tiquicia Lodge(obviamente se tiene que cargar el diagrama en el sql server):
+El esquema **PuraVidaDB** define **88 tablas**; la API implementa **38** modulos (entidad + servicio + controlador). Lo siguiente corresponde a tablas ya modeladas en SQL pero aun sin capa .NET, o funcionalidades transversales pendientes:
 
 ### Modulo de Auditoria y Logs
 - [ ] `BitacoraAcciones`: Seguimiento de acciones de usuarios.
@@ -335,6 +373,18 @@ Basado en el analisis del esquema `PuraVida.sql`, aun faltan por implementar los
 ---
 
 ## Bitacora de Cambios e Implementacion
+
+### Actualizacion Fase 6 (Mayo 2026)
+
+**Documentacion de esquema**
+
+- Integracion del **diccionario de datos** en `PuraVidaDB/diccionario-de-datos.md`: 88 tablas documentadas con tipo SQL, descripcion de negocio y relaciones FK.
+- Versiones complementarias: `Diccionario-de-base-datosv5.md` (vista consolidada) y `diccionario-de-base-de-datos.md` (formato legacy por tabla).
+- Proyecto **PuraVidaDB** agregado a la solucion (`Tiquicia_Lodge.slnx`) como fuente de verdad del esquema `dbo`.
+
+**Esquema SQL**
+
+- Scripts de tablas en `PuraVidaDB/dbo/Tables/` alineados con restricciones `FOREIGN KEY` para integridad referencial.
 
 ### Actualizacion Fase 5 (Mayo 2026)
 **Problemas Técnicos Resueltos:**
