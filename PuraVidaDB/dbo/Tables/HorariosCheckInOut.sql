@@ -8,6 +8,7 @@
     [Notas]       VARCHAR (200) NULL,
     PRIMARY KEY CLUSTERED ([IdHorario] ASC),
     CHECK ([TipoHorario]='CheckOut' OR [TipoHorario]='CheckIn'),
-    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
+    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
+    CONSTRAINT [FK_HorariosCheckInOut_Propiedad_IdPropiedad] FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
 );
 

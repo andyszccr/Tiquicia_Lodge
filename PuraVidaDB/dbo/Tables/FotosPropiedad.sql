@@ -9,6 +9,7 @@
     [FechaSubida] DATETIME      DEFAULT (getdate()) NULL,
     [Activo]      BIT           DEFAULT ((1)) NULL,
     PRIMARY KEY CLUSTERED ([IdFoto] ASC),
-    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
+    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
+    CONSTRAINT [FK_FotosPropiedad_Propiedad_IdPropiedad] FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
 );
 

@@ -17,6 +17,7 @@
     FOREIGN KEY ([IdReservaRelacionada]) REFERENCES [dbo].[Reservas] ([IdReserva]),
     FOREIGN KEY ([IdUsuarioReporta]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
     FOREIGN KEY ([IdUsuarioReportado]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
-    FOREIGN KEY ([ResueltoPor]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([ResueltoPor]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_Reportes_Estado_IdEstado] FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado])
 );
 

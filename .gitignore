@@ -61,8 +61,11 @@ nunit-*.xml
 *.vssscc
 *.vspscc
 *.bak
-*.cache
 *.docstates
+
+# Cache files (MSBuild, NuGet, static web assets, etc.)
+*.cache
+**/*.cache
 *.user
 *.userosscache
 *.suo

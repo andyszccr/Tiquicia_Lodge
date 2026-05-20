@@ -7,6 +7,7 @@
     [Activo]       BIT          DEFAULT ((1)) NULL,
     PRIMARY KEY CLUSTERED ([IdTelefono] ASC),
     CHECK ([TipoTelefono]='WhatsApp' OR [TipoTelefono]='Trabajo' OR [TipoTelefono]='Fijo' OR [TipoTelefono]='Celular'),
-    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_TelefonosUsuario_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
 );
 

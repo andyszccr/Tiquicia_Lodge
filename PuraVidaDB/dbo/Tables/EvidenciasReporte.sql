@@ -7,6 +7,7 @@
     [FechaSubida]   DATETIME      DEFAULT (getdate()) NULL,
     PRIMARY KEY CLUSTERED ([IdEvidencia] ASC),
     CHECK ([TipoEvidencia]='Documento' OR [TipoEvidencia]='Captura' OR [TipoEvidencia]='Foto'),
-    FOREIGN KEY ([IdReporte]) REFERENCES [dbo].[Reportes] ([IdReporte])
+    FOREIGN KEY ([IdReporte]) REFERENCES [dbo].[Reportes] ([IdReporte]),
+    CONSTRAINT [FK_EvidenciasReporte_Reportes_IdReporte] FOREIGN KEY ([IdReporte]) REFERENCES [dbo].[Reportes] ([IdReporte])
 );
 

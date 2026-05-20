@@ -7,6 +7,7 @@
     [Usada]           BIT           DEFAULT ((0)) NULL,
     PRIMARY KEY CLUSTERED ([IdSolicitud] ASC),
     FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_RecuperacionContrasena_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
     UNIQUE NONCLUSTERED ([Token] ASC)
 );
 

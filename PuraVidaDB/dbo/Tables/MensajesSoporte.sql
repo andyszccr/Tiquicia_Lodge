@@ -7,6 +7,7 @@
     [AdjuntoURL] VARCHAR (500)  NULL,
     PRIMARY KEY CLUSTERED ([IdMensaje] ASC),
     FOREIGN KEY ([IdTicket]) REFERENCES [dbo].[TicketsSoporte] ([IdTicket]),
-    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_MensajesSoporte_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
 );
 

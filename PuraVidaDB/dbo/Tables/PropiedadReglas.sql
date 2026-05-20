@@ -5,6 +5,7 @@
     [DetalleEspecifico] VARCHAR (200) NULL,
     PRIMARY KEY CLUSTERED ([IdPropiedad] ASC, [IdRegla] ASC),
     FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
-    FOREIGN KEY ([IdRegla]) REFERENCES [dbo].[ReglasCasa] ([IdRegla])
+    FOREIGN KEY ([IdRegla]) REFERENCES [dbo].[ReglasCasa] ([IdRegla]),
+    CONSTRAINT [FK_PropiedadReglas_Propiedad_IdPropiedad] FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
 );
 

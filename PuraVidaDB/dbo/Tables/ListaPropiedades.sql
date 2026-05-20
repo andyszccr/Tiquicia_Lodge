@@ -4,6 +4,7 @@
     [FechaAgregado] DATETIME DEFAULT (getdate()) NULL,
     PRIMARY KEY CLUSTERED ([IdLista] ASC, [IdPropiedad] ASC),
     FOREIGN KEY ([IdLista]) REFERENCES [dbo].[ListasDeseos] ([IdLista]),
-    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
+    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
+    CONSTRAINT [FK_ListaPropiedades_Propiedad_IdPropiedad] FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
 );
 

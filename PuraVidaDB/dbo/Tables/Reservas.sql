@@ -19,6 +19,8 @@
     CHECK ([CantidadPersonas]>(0)),
     FOREIGN KEY ([IdCliente]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
     FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]),
-    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
+    FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
+    CONSTRAINT [FK_Reservas_Estado_IdEstado] FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]),
+    CONSTRAINT [FK_Reservas_Propiedad_IdPropiedad] FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
 );
 

@@ -35,6 +35,8 @@
     FOREIGN KEY ([IdProveedor]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
     FOREIGN KEY ([IdTipoAlojamiento]) REFERENCES [dbo].[TipoAlojamiento] ([IdTipo]),
     FOREIGN KEY ([IdZona]) REFERENCES [dbo].[ZonasTicas] ([IdZona]),
-    FOREIGN KEY ([Moneda]) REFERENCES [dbo].[Monedas] ([IdMoneda])
+    FOREIGN KEY ([Moneda]) REFERENCES [dbo].[Monedas] ([IdMoneda]),
+    CONSTRAINT [FK_Propiedades_Distritos_IdDistrito] FOREIGN KEY ([IdDistrito]) REFERENCES [dbo].[Distritos] ([IdDistrito]),
+    CONSTRAINT [FK_Propiedades_Estado_IdEstado] FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado])
 );
 

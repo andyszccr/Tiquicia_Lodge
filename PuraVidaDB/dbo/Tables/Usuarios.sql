@@ -24,6 +24,10 @@
     FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]),
     FOREIGN KEY ([IdNacionalidad]) REFERENCES [dbo].[Nacionalidades] ([IdNacionalidad]),
     FOREIGN KEY ([IdRol]) REFERENCES [dbo].[Roles] ([IdRol]),
+    CONSTRAINT [FK_Usuarios_Distritos_IdDistrito] FOREIGN KEY ([IdDistrito]) REFERENCES [dbo].[Distritos] ([IdDistrito]),
+    CONSTRAINT [FK_Usuarios_Estado_IdEstado] FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]),
+    CONSTRAINT [FK_Usuarios_Nacionalidades_IdNacionalidad] FOREIGN KEY ([IdNacionalidad]) REFERENCES [dbo].[Nacionalidades] ([IdNacionalidad]),
+    CONSTRAINT [FK_Usuarios_Roles_IdRol] FOREIGN KEY ([IdRol]) REFERENCES [dbo].[Roles] ([IdRol]),
     UNIQUE NONCLUSTERED ([Correo] ASC)
 );
 

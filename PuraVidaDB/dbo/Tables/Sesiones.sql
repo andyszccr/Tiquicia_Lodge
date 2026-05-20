@@ -9,6 +9,7 @@
     [Activa]          BIT           DEFAULT ((1)) NULL,
     PRIMARY KEY CLUSTERED ([IdSesion] ASC),
     FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_Sesiones_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
     UNIQUE NONCLUSTERED ([Token] ASC)
 );
 

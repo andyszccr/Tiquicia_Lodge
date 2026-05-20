@@ -5,6 +5,7 @@
     [EsPrincipal] BIT           DEFAULT ((0)) NULL,
     [Activo]      BIT           DEFAULT ((1)) NULL,
     PRIMARY KEY CLUSTERED ([IdCorreo] ASC),
-    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_CorreosUsuario_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
 );
 

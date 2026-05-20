@@ -5,6 +5,7 @@
     [CodigoPostal]   VARCHAR (10)  NULL,
     [Activo]         BIT           DEFAULT ((1)) NULL,
     PRIMARY KEY CLUSTERED ([IdDistrito] ASC),
-    FOREIGN KEY ([IdCanton]) REFERENCES [dbo].[Cantones] ([IdCanton])
+    FOREIGN KEY ([IdCanton]) REFERENCES [dbo].[Cantones] ([IdCanton]),
+    CONSTRAINT [FK_Distritos_Cantones_IdCanton] FOREIGN KEY ([IdCanton]) REFERENCES [dbo].[Cantones] ([IdCanton])
 );
 

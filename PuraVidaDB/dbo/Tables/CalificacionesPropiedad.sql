@@ -12,6 +12,8 @@
     FOREIGN KEY ([IdCliente]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
     FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
     FOREIGN KEY ([IdReserva]) REFERENCES [dbo].[Reservas] ([IdReserva]),
+    CONSTRAINT [FK_CalificacionesPropiedad_Propiedad_IdPropiedad] FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
+    CONSTRAINT [FK_CalificacionesPropiedad_Reserva_IdReserva] FOREIGN KEY ([IdReserva]) REFERENCES [dbo].[Reservas] ([IdReserva]),
     UNIQUE NONCLUSTERED ([IdReserva] ASC)
 );
 

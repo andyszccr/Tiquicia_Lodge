@@ -5,6 +5,7 @@
     [IncluidoEnPrecio]     BIT           DEFAULT ((1)) NULL,
     PRIMARY KEY CLUSTERED ([IdPropiedad] ASC, [IdServicio] ASC),
     FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]),
-    FOREIGN KEY ([IdServicio]) REFERENCES [dbo].[ServiciosPropiedad] ([IdServicio])
+    FOREIGN KEY ([IdServicio]) REFERENCES [dbo].[ServiciosPropiedad] ([IdServicio]),
+    CONSTRAINT [FK_PropiedadServicios_Propiedad_IdPropiedad] FOREIGN KEY ([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad])
 );
 

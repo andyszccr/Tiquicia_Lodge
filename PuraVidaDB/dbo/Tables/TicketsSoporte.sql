@@ -12,6 +12,8 @@
     CHECK ([Prioridad]='Urgente' OR [Prioridad]='Alta' OR [Prioridad]='Media' OR [Prioridad]='Baja'),
     FOREIGN KEY ([IdAgenteAsignado]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
     FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]),
-    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_TicketsSoporte_Estado_IdEstado] FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]),
+    CONSTRAINT [FK_TicketsSoporte_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
 );
 

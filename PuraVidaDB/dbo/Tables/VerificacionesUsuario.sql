@@ -7,6 +7,7 @@
     [MetodoVerificacion] VARCHAR (100) NULL,
     PRIMARY KEY CLUSTERED ([IdVerificacion] ASC),
     CHECK ([TipoVerificacion]='RedSocial' OR [TipoVerificacion]='Correo' OR [TipoVerificacion]='Telefono' OR [TipoVerificacion]='Identificacion'),
-    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_VerificacionesUsuario_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
 );
 

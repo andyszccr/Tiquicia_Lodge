@@ -5,6 +5,7 @@
     [FechaCreacion] DATETIME      DEFAULT (getdate()) NULL,
     [Privada]       BIT           DEFAULT ((1)) NULL,
     PRIMARY KEY CLUSTERED ([IdLista] ASC),
-    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_ListasDeseos_Usuario_IdUsuario] FOREIGN KEY ([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
 );
 

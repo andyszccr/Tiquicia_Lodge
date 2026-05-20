@@ -14,6 +14,7 @@
     CHECK ([EstadoPago]='Reembolsado' OR [EstadoPago]='Fallido' OR [EstadoPago]='Completado' OR [EstadoPago]='Pendiente'),
     CHECK ([MetodoPago]='PayPal' OR [MetodoPago]='Transferencia' OR [MetodoPago]='Efectivo' OR [MetodoPago]='Tarjeta' OR [MetodoPago]='SINPE Movil'),
     FOREIGN KEY ([IdReserva]) REFERENCES [dbo].[Reservas] ([IdReserva]),
-    FOREIGN KEY ([IdUsuarioRegistra]) REFERENCES [dbo].[Usuarios] ([IdUsuario])
+    FOREIGN KEY ([IdUsuarioRegistra]) REFERENCES [dbo].[Usuarios] ([IdUsuario]),
+    CONSTRAINT [FK_Pagos_Reserva_IdReserva] FOREIGN KEY ([IdReserva]) REFERENCES [dbo].[Reservas] ([IdReserva])
 );
 
