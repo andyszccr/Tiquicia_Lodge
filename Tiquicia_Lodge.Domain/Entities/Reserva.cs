@@ -13,6 +13,9 @@ namespace Tiquicia_Lodge.Domain.Entities
         
         public int IdCliente { get; set; }
         public int IdPropiedad { get; set; }
+
+        [ForeignKey("IdPropiedad")]
+        public virtual Propiedad Propiedad { get; set; } = null!;
         
         [Required]
         public DateTime FechaEntrada { get; set; }
@@ -39,6 +42,9 @@ namespace Tiquicia_Lodge.Domain.Entities
         public decimal Total { get; set; }
         
         public int IdEstado { get; set; }
+
+        [ForeignKey("IdEstado")]
+        public virtual Estado Estado { get; set; } = null!;
         public DateTime? FechaReserva { get; set; }
         
         [MaxLength(500)]

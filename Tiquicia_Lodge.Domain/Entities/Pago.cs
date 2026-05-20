@@ -13,6 +13,9 @@ namespace Tiquicia_Lodge.Domain.Entities
 
         public int IdReserva { get; set; }
 
+        [ForeignKey("IdReserva")]
+        public virtual Reserva Reserva { get; set; } = null!;
+
         [Column(TypeName = "decimal(18,2)")]
         public decimal Monto_CRC { get; set; }
 

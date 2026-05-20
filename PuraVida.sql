@@ -2385,3 +2385,40 @@ ALTER TABLE [dbo].[VerificacionesUsuario]  WITH CHECK ADD CHECK  (([TipoVerifica
 GO
 ALTER TABLE [dbo].[VideosPropiedad]  WITH CHECK ADD CHECK  (([TipoVideo]='Local' OR [TipoVideo]='Vimeo' OR [TipoVideo]='YouTube'))
 GO
+
+-- Foreign Key Constraints Added for Referential Integrity
+
+ALTER TABLE [dbo].[CalificacionesPropiedad] ADD CONSTRAINT [FK_CalificacionesPropiedad_Reserva_IdReserva] FOREIGN KEY([IdReserva]) REFERENCES [dbo].[Reservas] ([IdReserva]);
+ALTER TABLE [dbo].[CalificacionesPropiedad] ADD CONSTRAINT [FK_CalificacionesPropiedad_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[Cantones] ADD CONSTRAINT [FK_Cantones_Provincias_IdProvincia] FOREIGN KEY([IdProvincia]) REFERENCES [dbo].[Provincias] ([IdProvincia]);
+ALTER TABLE [dbo].[CorreosUsuario] ADD CONSTRAINT [FK_CorreosUsuario_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+ALTER TABLE [dbo].[Distritos] ADD CONSTRAINT [FK_Distritos_Cantones_IdCanton] FOREIGN KEY([IdCanton]) REFERENCES [dbo].[Cantones] ([IdCanton]);
+ALTER TABLE [dbo].[EvidenciasReporte] ADD CONSTRAINT [FK_EvidenciasReporte_Reportes_IdReporte] FOREIGN KEY([IdReporte]) REFERENCES [dbo].[Reportes] ([IdReporte]);
+ALTER TABLE [dbo].[FotosPropiedad] ADD CONSTRAINT [FK_FotosPropiedad_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[HorariosCheckInOut] ADD CONSTRAINT [FK_HorariosCheckInOut_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[ListaPropiedades] ADD CONSTRAINT [FK_ListaPropiedades_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[ListasDeseos] ADD CONSTRAINT [FK_ListasDeseos_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+ALTER TABLE [dbo].[MensajesSoporte] ADD CONSTRAINT [FK_MensajesSoporte_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+ALTER TABLE [dbo].[Pagos] ADD CONSTRAINT [FK_Pagos_Reserva_IdReserva] FOREIGN KEY([IdReserva]) REFERENCES [dbo].[Reservas] ([IdReserva]);
+ALTER TABLE [dbo].[PromocionesPropiedad] ADD CONSTRAINT [FK_PromocionesPropiedad_Promociones_IdPromocion] FOREIGN KEY([IdPromocion]) REFERENCES [dbo].[Promociones] ([IdPromocion]);
+ALTER TABLE [dbo].[PromocionesPropiedad] ADD CONSTRAINT [FK_PromocionesPropiedad_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[Propiedades] ADD CONSTRAINT [FK_Propiedades_Distritos_IdDistrito] FOREIGN KEY([IdDistrito]) REFERENCES [dbo].[Distritos] ([IdDistrito]);
+ALTER TABLE [dbo].[Propiedades] ADD CONSTRAINT [FK_Propiedades_Estado_IdEstado] FOREIGN KEY([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]);
+ALTER TABLE [dbo].[PropiedadEquipamiento] ADD CONSTRAINT [FK_PropiedadEquipamiento_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[PropiedadEquipamiento] ADD CONSTRAINT [FK_PropiedadEquipamiento_Equipamiento_IdEquipamiento] FOREIGN KEY([IdEquipamiento]) REFERENCES [dbo].[Equipamiento] ([IdEquipamiento]);
+ALTER TABLE [dbo].[PropiedadReglas] ADD CONSTRAINT [FK_PropiedadReglas_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[PropiedadServicios] ADD CONSTRAINT [FK_PropiedadServicios_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[RecuperacionContrasena] ADD CONSTRAINT [FK_RecuperacionContrasena_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+ALTER TABLE [dbo].[Reportes] ADD CONSTRAINT [FK_Reportes_Estado_IdEstado] FOREIGN KEY([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]);
+ALTER TABLE [dbo].[Reservas] ADD CONSTRAINT [FK_Reservas_Propiedad_IdPropiedad] FOREIGN KEY([IdPropiedad]) REFERENCES [dbo].[Propiedades] ([IdPropiedad]);
+ALTER TABLE [dbo].[Reservas] ADD CONSTRAINT [FK_Reservas_Estado_IdEstado] FOREIGN KEY([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]);
+ALTER TABLE [dbo].[Sesiones] ADD CONSTRAINT [FK_Sesiones_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+ALTER TABLE [dbo].[TelefonosUsuario] ADD CONSTRAINT [FK_TelefonosUsuario_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+ALTER TABLE [dbo].[TicketsSoporte] ADD CONSTRAINT [FK_TicketsSoporte_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+ALTER TABLE [dbo].[TicketsSoporte] ADD CONSTRAINT [FK_TicketsSoporte_Estado_IdEstado] FOREIGN KEY([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]);
+ALTER TABLE [dbo].[Usuarios] ADD CONSTRAINT [FK_Usuarios_Nacionalidades_IdNacionalidad] FOREIGN KEY([IdNacionalidad]) REFERENCES [dbo].[Nacionalidades] ([IdNacionalidad]);
+ALTER TABLE [dbo].[Usuarios] ADD CONSTRAINT [FK_Usuarios_Distritos_IdDistrito] FOREIGN KEY([IdDistrito]) REFERENCES [dbo].[Distritos] ([IdDistrito]);
+ALTER TABLE [dbo].[Usuarios] ADD CONSTRAINT [FK_Usuarios_Roles_IdRol] FOREIGN KEY([IdRol]) REFERENCES [dbo].[Roles] ([IdRol]);
+ALTER TABLE [dbo].[Usuarios] ADD CONSTRAINT [FK_Usuarios_Estado_IdEstado] FOREIGN KEY([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]);
+ALTER TABLE [dbo].[VerificacionesUsuario] ADD CONSTRAINT [FK_VerificacionesUsuario_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
+GO

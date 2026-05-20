@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tiquicia_Lodge.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36ed987cb3af2afa72d25f977680867747fd1ade")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49e1758550f4ea997cfce0ba0069f3c57a4acefd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tiquicia_Lodge.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tiquicia_Lodge.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\esteb\\.nuget\\packages\\": {},
+    "C:\\Users\\andre\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\Tiquicia_Lodge.Domain.csproj",
+      "projectUniqueName": "D:\\Documentos\\01 Inovatry Solutions\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\Tiquicia_Lodge.Domain.csproj",
       "projectName": "Tiquicia_Lodge.Domain",
-      "projectPath": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\Tiquicia_Lodge.Domain.csproj",
-      "packagesPath": "C:\\Users\\esteb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\esteb\\Desktop\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\obj\\",
+      "projectPath": "D:\\Documentos\\01 Inovatry Solutions\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\Tiquicia_Lodge.Domain.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\01 Inovatry Solutions\\Tiquicia_Lodge\\Tiquicia_Lodge.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\esteb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -34,7 +34,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/ChristopherHG-007/index.json": {}
       },
       "frameworks": {
         "net10.0": {
@@ -73,7 +74,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -15,6 +15,9 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdTipoAlojamiento { get; set; }
         public int IdZona { get; set; }
         public int? IdDistrito { get; set; }
+
+        [ForeignKey("IdDistrito")]
+        public virtual Distritos? Distrito { get; set; }
         
         [Required, MaxLength(250)]
         public string NombrePropiedad { get; set; }
@@ -46,6 +49,9 @@ namespace Tiquicia_Lodge.Domain.Entities
         public decimal? DepositoGarantia { get; set; }
         
         public int IdEstado { get; set; }
+
+        [ForeignKey("IdEstado")]
+        public virtual Estado Estado { get; set; } = null!;
         public bool? Verificado { get; set; }
         public DateTime? FechaRegistro { get; set; }
         public DateTime? FechaActualizacion { get; set; }

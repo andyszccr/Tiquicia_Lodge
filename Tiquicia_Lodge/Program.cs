@@ -49,6 +49,25 @@ builder.Services.AddScoped<IPoliticasCancelacionService, PoliticasCancelacionSer
 builder.Services.AddScoped<IComerciosCercanosService, ComerciosCercanosService>();
 builder.Services.AddScoped<ITransporteCercanoService, TransporteCercanoService>();
 
+// Fase 5: Soporte y Marketing
+builder.Services.AddScoped<ITicketsSoporteService, TicketsSoporteService>();
+builder.Services.AddScoped<IMensajesSoporteService, MensajesSoporteService>();
+builder.Services.AddScoped<IReportesService, ReportesService>();
+builder.Services.AddScoped<IEvidenciasReporteService, EvidenciasReporteService>();
+builder.Services.AddScoped<ICategoriasFAQService, CategoriasFAQService>();
+builder.Services.AddScoped<IFAQsService, FAQsService>();
+builder.Services.AddScoped<INewsletterSuscriptoresService, NewsletterSuscriptoresService>();
+builder.Services.AddScoped<IPromocionesService, PromocionesService>();
+builder.Services.AddScoped<IPromocionesPropiedadService, PromocionesPropiedadService>();
+
+// Módulo Geográfico y Filtros de Búsqueda
+builder.Services.AddScoped<IZonasTicasService, ZonasTicasService>();
+builder.Services.AddScoped<ICantonesService, CantonesService>();
+builder.Services.AddScoped<IDistritosService, DistritosService>();
+builder.Services.AddScoped<INacionalidadesService, NacionalidadesService>();
+builder.Services.AddScoped<IListasDeseosService, ListasDeseosService>();
+builder.Services.AddScoped<IListaPropiedadesService, ListaPropiedadesService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

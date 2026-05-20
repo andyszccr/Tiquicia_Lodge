@@ -57,6 +57,34 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                     b.ToTable("CalificacionesPropiedad");
                 });
 
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.CategoriasFAQ", b =>
+                {
+                    b.Property<int>("IdCategoriaFAQ")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCategoriaFAQ"));
+
+                    b.Property<bool?>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("NombreCategoria")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("Orden")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdCategoriaFAQ");
+
+                    b.ToTable("CategoriasFAQ");
+                });
+
             modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.ComerciosCercanos", b =>
                 {
                     b.Property<int>("IdComercio")
@@ -176,6 +204,85 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                     b.ToTable("Estados");
                 });
 
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.EvidenciasReporte", b =>
+                {
+                    b.Property<int>("IdEvidencia")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdEvidencia"));
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("FechaSubida")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IdReporte")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TipoEvidencia")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("UrlArchivo")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("IdEvidencia");
+
+                    b.ToTable("EvidenciasReporte");
+                });
+
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.FAQs", b =>
+                {
+                    b.Property<int>("IdFAQ")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdFAQ"));
+
+                    b.Property<bool?>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("CreadoPor")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IdCategoriaFAQ")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ModificadoPor")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Orden")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Pregunta")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Respuesta")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<int?>("VecesVista")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdFAQ");
+
+                    b.ToTable("FAQs");
+                });
+
             modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.FotosPropiedad", b =>
                 {
                     b.Property<int>("IdFoto")
@@ -250,6 +357,69 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                     b.ToTable("HorariosCheckInOut");
                 });
 
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.MensajesSoporte", b =>
+                {
+                    b.Property<int>("IdMensaje")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdMensaje"));
+
+                    b.Property<string>("AdjuntoURL")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("FechaEnvio")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IdTicket")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Mensaje")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.HasKey("IdMensaje");
+
+                    b.ToTable("MensajesSoporte");
+                });
+
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.NewsletterSuscriptores", b =>
+                {
+                    b.Property<int>("IdSuscriptor")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdSuscriptor"));
+
+                    b.Property<bool?>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("FechaSuscripcion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("TokenCancelacion")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("IdSuscriptor");
+
+                    b.ToTable("NewsletterSuscriptores");
+                });
+
             modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.Pago", b =>
                 {
                     b.Property<int>("IdPago")
@@ -259,12 +429,10 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdPago"));
 
                     b.Property<string>("ComprobanteURL")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("EstadoPago")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
@@ -289,12 +457,12 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ReferenciaBanco")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("TelefonoSINPE")
-                        .HasColumnType("int");
+                    b.Property<string>("TelefonoSINPE")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("IdPago");
 
@@ -332,6 +500,59 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                     b.ToTable("PoliticasCancelacion");
                 });
 
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.Promociones", b =>
+                {
+                    b.Property<int>("IdPromocion")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdPromocion"));
+
+                    b.Property<bool?>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<DateTime>("FechaFin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaInicio")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NombrePromo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<decimal?>("PorcentajeDescuento")
+                        .HasColumnType("decimal(5,2)");
+
+                    b.Property<string>("TipoPromo")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("IdPromocion");
+
+                    b.ToTable("Promociones");
+                });
+
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.PromocionesPropiedad", b =>
+                {
+                    b.Property<int>("IdPromocion")
+                        .HasColumnType("int")
+                        .HasColumnOrder(0);
+
+                    b.Property<int>("IdPropiedad")
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    b.HasKey("IdPromocion", "IdPropiedad");
+
+                    b.ToTable("PromocionesPropiedad");
+                });
+
             modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.Propiedad", b =>
                 {
                     b.Property<int>("IdPropiedad")
@@ -359,7 +580,6 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("DescripcionCorta")
-                        .IsRequired()
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
@@ -404,7 +624,6 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                         .HasColumnType("decimal(3,2)");
 
                     b.Property<string>("TituloPromocional")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -564,6 +783,57 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                     b.ToTable("ReglasCasa");
                 });
 
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.Reportes", b =>
+                {
+                    b.Property<int>("IdReporte")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdReporte"));
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("FechaReporte")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaResolucion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IdEstado")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdPropiedadReportada")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdReservaRelacionada")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdUsuarioReporta")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdUsuarioReportado")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Motivo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Resolucion")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int?>("ResueltoPor")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdReporte");
+
+                    b.ToTable("Reportes");
+                });
+
             modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.Reserva", b =>
                 {
                     b.Property<int>("IdReserva")
@@ -603,12 +873,10 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("NotasCliente")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("NotasInternas")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -717,6 +985,48 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                     b.ToTable("TelefonosUsuario");
                 });
 
+            modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.TicketsSoporte", b =>
+                {
+                    b.Property<int>("IdTicket")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdTicket"));
+
+                    b.Property<string>("Asunto")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<DateTime?>("FechaCierre")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("IdAgenteAsignado")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdEstado")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Prioridad")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("IdTicket");
+
+                    b.ToTable("TicketsSoporte");
+                });
+
             modelBuilder.Entity("Tiquicia_Lodge.Domain.Entities.TransporteCercano", b =>
                 {
                     b.Property<int>("IdTransporte")
@@ -778,11 +1088,9 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FotoPerfil")
-                        .IsRequired()
                         .HasColumnType("varchar(max)");
 
                     b.Property<string>("Genero")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("IdDistrito")
@@ -803,7 +1111,6 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("NotasInternas")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -813,7 +1120,6 @@ namespace Tiquicia_Lodge.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("SegundoApellido")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 

@@ -37,6 +37,25 @@ namespace Tiquicia_Lodge.Infrastructure.Data
         public DbSet<PoliticasCancelacion> PoliticasCancelacion { get; set; }
         public DbSet<ComerciosCercanos> ComerciosCercanos { get; set; }
         public DbSet<TransporteCercano> TransporteCercano { get; set; }
+        
+        // Fase 5: Soporte y Marketing
+        public DbSet<TicketsSoporte> TicketsSoporte { get; set; }
+        public DbSet<MensajesSoporte> MensajesSoporte { get; set; }
+        public DbSet<Reportes> Reportes { get; set; }
+        public DbSet<EvidenciasReporte> EvidenciasReporte { get; set; }
+        public DbSet<CategoriasFAQ> CategoriasFAQ { get; set; }
+        public DbSet<FAQs> FAQs { get; set; }
+        public DbSet<NewsletterSuscriptores> NewsletterSuscriptores { get; set; }
+        public DbSet<Promociones> Promociones { get; set; }
+        public DbSet<PromocionesPropiedad> PromocionesPropiedad { get; set; }
+
+        // Módulo Geográfico y Filtros de Búsqueda
+        public DbSet<ZonasTicas> ZonasTicas { get; set; }
+        public DbSet<Cantones> Cantones { get; set; }
+        public DbSet<Distritos> Distritos { get; set; }
+        public DbSet<Nacionalidades> Nacionalidades { get; set; }
+        public DbSet<ListasDeseos> ListasDeseos { get; set; }
+        public DbSet<ListaPropiedades> ListaPropiedades { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -50,6 +69,12 @@ namespace Tiquicia_Lodge.Infrastructure.Data
 
             modelBuilder.Entity<PropiedadReglas>()
                 .HasKey(pr => new { pr.IdPropiedad, pr.IdRegla });
+
+            modelBuilder.Entity<PromocionesPropiedad>()
+                .HasKey(pp => new { pp.IdPromocion, pp.IdPropiedad });
+
+            modelBuilder.Entity<ListaPropiedades>()
+                .HasKey(lp => new { lp.IdLista, lp.IdPropiedad });
         }
     }
 }
