@@ -6,6 +6,9 @@ using Tiquicia_Lodge.Domain.Interfaces;
 using Tiquicia_Lodge.Infrastructure.Repositories;
 using Tiquicia_Lodge.Infrastructure.Data;
 
+// Usar el namespace de PostgreSQL con alias
+using PostgresDbContext = Tiquicia_Lodge.Infrastructure.PostgreSQL.Data.ApplicationDbContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,6 +19,10 @@ builder.Services.AddSwaggerGen();
 // Configurar contexto de la base de datos leyendo de appsettings.json
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Configurar contexto de PostgreSQL
+builder.Services.AddDbContext<PostgresDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSqlConnection")));
 
 // Inyección de dependencias de Repositorios y Servicios
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));

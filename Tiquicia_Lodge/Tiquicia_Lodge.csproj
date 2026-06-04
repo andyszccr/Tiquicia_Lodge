@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0-*" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0-*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0-*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0-*" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" />
@@ -17,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Tiquicia_Lodge.Application\Tiquicia_Lodge.Application.csproj" />
     <ProjectReference Include="..\Tiquicia_Lodge.Infrastructure\Tiquicia_Lodge.Infrastructure.csproj" />
+    <ProjectReference Include="..\Tiquicia_Lodge.Infrastructure.PostgreSQL\Tiquicia_Lodge.Infrastructure.PostgreSQL.csproj" />
     <ProjectReference Include="..\Tiquicia_Lodge.Domain\Tiquicia_Lodge.Domain.csproj" />
   </ItemGroup>
 

@@ -96,3 +96,9 @@ nunit-*.xml
 # Ignore Rider
 .idea/
 *.sln.iml
+
+# Ignore SQL Server Data Tools (SSDT) temporary files
+PuraVidaDB/*.dbmdl
+PuraVidaDB/*.jfm
+PuraVidaDB/*.dbproj.user
+PuraVidaDB/*.sqlproj.user
