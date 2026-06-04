@@ -1,0 +1,59 @@
+=============================================================================
+ARQUITECTURA DE BASE DE DATOS: TIQUICIA LODGE (POSTGRESQL)
+DICCIONARIO DE DATOS Y JUSTIFICACIÓN TÉCNICA
+=============================================================================
+Rol: DB Senior Engineer
+Fecha: 2026-06-03
+-----------------------------------------------------------------------------
+
+1. ESTÁNDAR DE AUDITORÍA (DB SENIOR AUDIT STANDARD)
+--------------------------------------------------
+Todas las tablas siguen un patrón de auditoría riguroso para cumplimiento legal.
+
+- Columnas de Auditoría: CreadoPor, FechaCreacion, ModificadoPor, FechaModificacion, IpOrigen, Dispositivo.
+- Soft Delete: Implementado mediante EsEliminado, FechaEliminacion y UsuarioElimino.
+- Justificación: Garantiza la integridad histórica de los datos y permite recuperar registros eliminados accidentalmente sin romper la integridad referencial.
+
+2. DICCIONARIO DE DATOS POR MÓDULOS
+-----------------------------------
+
+2.1 Módulo: Infraestructura y Maestros
+- Roles: Perfiles de acceso (Admin, Proveedor, Cliente). Justificación: Control RBAC.
+- Estados: Estados transversales del sistema. Justificación: Centralización de lógica.
+- Monedas: Soporte para CRC y USD. Justificación: Escalabilidad financiera.
+- ConfiguracionSistema: Parámetros globales. Justificación: Ajustes sin cambios en código.
+
+2.2 Módulo: Geografía (Costa Rica Core)
+- Provincias / Cantones / Distritos: Jerarquía 1:N estricta según división territorial de CR.
+- ZonasTicas: Clasificación comercial para marketing y segmentación turística.
+
+2.3 Módulo: Usuarios e Identidad
+- Usuarios: Gestión central de actores con validaciones de unicidad y seguridad.
+- Sesiones / Verificaciones: Seguridad para evitar secuestro de sesiones y fraude (KYC).
+
+2.4 Módulo: Inventario y Propiedades
+- Propiedades: Utiliza GEOGRAPHY (PostGIS) para búsquedas espaciales precisas.
+- PreciosTemporada: Lógica de precios dinámicos según el calendario turístico de CR.
+- PropiedadEquipamiento: Relación N:M para gestión dinámica de amenidades.
+
+2.5 Módulo: Operaciones y Finanzas
+- Reservas: Orquestador de la transacción comercial y disponibilidad.
+- Pagos: Registro multicanal (SINPE Móvil, Tarjetas, PayPal).
+- Facturas: Referencia a documentos legales para cumplimiento tributario.
+- Comisiones: Gestión transparente de la rentabilidad de la plataforma.
+
+2.6 Módulo: Feedback y Soporte
+- CalificacionesPropiedad: Feedback de clientes con restricciones de integridad (1-5 estrellas).
+- CalificacionesCliente: Sistema de reputación bidireccional.
+- BitacoraAcciones / LogsErrores: Monitoreo forense y depuración proactiva.
+
+3. CONSIDERACIONES DE INGENIERÍA SENIOR
+---------------------------------------
+1. Integridad: Uso mandatorio de FOREIGN KEY con restricciones de integridad.
+2. Rendimiento: Optimizado para índices B-Tree y GIST (Geoespacial).
+3. Lógica Centralizada: Uso de Stored Procedures para consistencia entre clientes.
+4. Extensibilidad: Arquitectura preparada para nuevos métodos de pago y categorías.
+
+=============================================================================
+FIN DEL DOCUMENTO
+=============================================================================
