@@ -1,11 +1,11 @@
 <Solution>
-  <Project Path="InfraestructuraPG/InfraestructuraPG.csproj" Id="65936c63-2be2-410b-9f3e-6b0110737e3a" />
   <Project Path="PuraVidaDB/PuraVidaDB.sqlproj" Id="5b5b07ba-5b83-4064-ac7d-d02345485169">
     <Build />
     <Deploy />
   </Project>
   <Project Path="Tiquicia_Lodge.Application\Tiquicia_Lodge.Application.csproj" />
   <Project Path="Tiquicia_Lodge.Domain\Tiquicia_Lodge.Domain.csproj" />
+  <Project Path="Tiquicia_Lodge.Infrastructure.PostgreSQL/Tiquicia_Lodge.Infrastructure.PostgreSQL.csproj" />
   <Project Path="Tiquicia_Lodge.Infrastructure\Tiquicia_Lodge.Infrastructure.csproj" />
   <Project Path="Tiquicia_Lodge\Tiquicia_Lodge.csproj" />
 </Solution>

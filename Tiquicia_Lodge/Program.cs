@@ -74,12 +74,15 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tiquicia Lodge API v1"));
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+// Redirigir la raíz a Swagger
+app.MapGet("/", () => Results.Redirect("/swagger"));
 
 app.MapControllers();
 

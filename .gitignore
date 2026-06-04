@@ -72,3 +72,27 @@ nunit-*.xml
 
 # Local history
 .history/
+
+# Ignore all bin and obj directories recursively
+**/bin/
+**/obj/
+
+# Ignore .NET temporary files
+*.nupkg
+*.snupkg
+*.userprefs
+*.DotSettings
+*.tmp
+*.temp
+
+# Ignore Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Ignore Rider
+.idea/
+*.sln.iml
