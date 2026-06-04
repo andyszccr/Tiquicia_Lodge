@@ -1,0 +1,30 @@
+CREATE TABLE Usuarios (
+    IdUsuario          INT           NOT NULL,
+    Nombre             VARCHAR (100) NOT NULL,
+    PrimerApellido     VARCHAR (100) NOT NULL,
+    SegundoApellido    VARCHAR (100) NULL,
+    Correo             VARCHAR (100) NOT NULL,
+    Contrasena         VARCHAR (255) NOT NULL,
+    IdNacionalidad     INT           NOT NULL,
+    Direccion          VARCHAR (300) NOT NULL,
+    IdDistrito         INT           NULL,
+    FechaNacimiento    DATE          NULL,
+    Genero             CHAR (1)      NULL,
+    IdRol              INT           NOT NULL,
+    IdEstado           INT           NOT NULL,
+    FechaRegistro      TIMESTAMP      DEFAULT CURRENT_TIMESTAMP NULL,
+    UltimoAcceso       TIMESTAMP      NULL,
+    EmailConfirmado    BOOLEAN           DEFAULT FALSE NULL,
+    TelefonoConfirmado BOOLEAN           DEFAULT FALSE NULL,
+    FotoPerfil         VARCHAR (500) NULL,
+    NotasInternas      VARCHAR (500) NULL,
+    PRIMARY KEY (IdUsuario),
+    CHECK (Genero='O' OR Genero='F' OR Genero='M'),
+    FOREIGN KEY (IdDistrito) REFERENCES Distritos (IdDistrito),
+    FOREIGN KEY (IdEstado) REFERENCES Estados (IdEstado),
+    FOREIGN KEY (IdNacionalidad) REFERENCES Nacionalidades (IdNacionalidad),
+    FOREIGN KEY (IdRol) REFERENCES Roles (IdRol),
+    UNIQUE (Correo)
+);
+
+

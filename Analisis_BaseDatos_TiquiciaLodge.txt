@@ -1,0 +1,105 @@
+DOCUMENTO DE ANÁLISIS DE BASE DE DATOS - TIQUICIA LODGE
+
+Este documento contiene el análisis detallado de la estructura de la base de datos para el proyecto Tiquicia Lodge, basado en los archivos SQL encontrados en el repositorio.
+
+================================================================================
+1. INFORMACIÓN GENERAL
+================================================================================
+Nombre del Sistema: Tiquicia Lodge
+Propósito: Gestión de alojamientos, experiencias turísticas y reservas en Costa Rica.
+Tecnología: SQL Server (Scripts .sql)
+
+================================================================================
+2. MÓDULOS PRINCIPALES Y FUNCIONALIDAD
+================================================================================
+
+A. GESTIÓN DE USUARIOS Y SEGURIDAD
+---------------------------------
+- Usuarios: Almacena información de Clientes, Proveedores y Administradores.
+- Roles: Define los permisos dentro de la plataforma.
+- Sesiones y Seguridad: Manejo de sesiones de usuario y recuperación de contraseñas.
+- Verificación: Documentos de identidad y procesos de validación para usuarios.
+- Contacto: Tablas específicas para correos y teléfonos múltiples.
+
+B. PROPIEDADES Y ALOJAMIENTO
+---------------------------
+- Propiedades: Datos maestros de los alojamientos (título, descripción, ubicación).
+- Categorías: Clasificación por tipo de alojamiento (cabinas, villas, etc.).
+- Multimedia: Gestión de fotos y videos de cada propiedad.
+- Equipamiento y Servicios: Inventario de lo que ofrece cada propiedad (WiFi, piscina, etc.).
+- Reglas y Políticas: Normas de la casa y condiciones de cancelación.
+
+C. RESERVAS Y OPERACIONES
+-------------------------
+- Reservas: Control de fechas, huéspedes y estados de la reserva.
+- Precios y Temporadas: Gestión de precios dinámicos y calendarios de temporadas.
+- Descuentos y Promociones: Aplicación de ofertas tanto generales como específicas por propiedad.
+- Check-in/Check-out: Horarios y notas sobre la entrega y recepción de la propiedad.
+
+D. FINANZAS Y PAGOS
+-------------------
+- Pagos: Registro de transacciones con soporte para SINPE Móvil y transferencias bancarias.
+- Facturación: Sistema de emisión de facturas y almacenamiento de comprobantes.
+- Comisiones: Gestión de cobros de la plataforma a los proveedores.
+- Reembolsos: Manejo de devoluciones de dinero por cancelaciones.
+
+E. GEOGRAFÍA Y TURISMO (COSTA RICA)
+----------------------------------
+- Estructura Territorial: Provincias, Cantones y Distritos de Costa Rica.
+- Zonas Ticas: Regionalización turística específica.
+- Lugares Turísticos: Catálogo de puntos de interés cercanos a las propiedades.
+- Experiencias: Tours y actividades adicionales ofrecidas.
+
+F. SOPORTE Y COMUNICACIÓN
+-------------------------
+- Tickets de Soporte: Sistema de ayuda técnica para usuarios.
+- Mensajería: Comunicación interna entre soporte y usuarios.
+- FAQs: Preguntas frecuentes organizadas por categorías.
+- Notificaciones: Alertas internas enviadas a los usuarios.
+
+G. MÉTRICAS Y AUDITORÍA
+----------------------
+- Bitácora de Acciones: Registro de movimientos importantes en el sistema.
+- Logs de Errores: Captura de fallos técnicos para mantenimiento.
+- Métricas Diarias: Estadísticas de visitas, búsquedas y rendimiento del negocio.
+
+================================================================================
+3. LISTADO COMPLETO DE TABLAS ANALIZADAS (dbo/Tables)
+================================================================================
+Se identificaron las siguientes tablas en el directorio del proyecto:
+
+1. BitacoraAcciones         2. BusquedasUsuarios        3. CalificacionesCliente
+4. CalificacionesPropiedad  5. Cantones                 6. CategoriaAlojamiento
+7. CategoriaEquipamiento    8. CategoriaExperiencia     9. CategoriaLugarTuristico
+10. CategoriaServicio       11. CategoriasFAQ           12. ClicksContacto
+13. ComerciosCercanos       14. Comisiones              15. ConfiguracionSistema
+16. ContactosDirectos       17. CorreosUsuario          18. DashboardProveedor
+19. Descuentos              20. DescuentosPropiedad     21. Distritos
+22. DocumentosPropiedad     23. DocumentosVerificacion  24. Equipamiento
+25. Estados                 26. EvidenciasReporte       27. Experiencias
+28. ExperienciasCercanas    29. FAQs                    30. Facturas
+31. FotosPropiedad          32. GananciasProveedor      33. HistorialEstadosReserva
+34. HistorialPrecios        35. HorariosCheckInOut      36. ListaPropiedades
+37. ListasDeseos            38. LogsErrores             39. LugaresTuristicos
+40. MensajesSoporte         41. MetricasDiarias         42. ModulosSistema
+43. Monedas                 44. Nacionalidades          45. NewsletterSuscriptores
+46. Notificaciones          47. Pagos                   48. PagosComisiones
+49. PagosPendientes         50. PlanesProveedor         51. PoliticasCancelacion
+52. PreciosTemporada        53. Promociones             54. PromocionesPropiedad
+55. PropiedadComercios      56. PropiedadEquipamiento   57. PropiedadLugaresCercanos
+58. PropiedadPoliticas      59. PropiedadReglas         60. PropiedadRequerimientos
+61. PropiedadSellos         62. PropiedadServicios      63. PropiedadTransporte
+64. Propiedades             65. Provincias              66. RecuperacionContrasena
+67. Reembolsos              68. ReglasCasa              69. Reportes
+70. RequerimientosReserva   71. Reservas                72. RespuestasCalificacion
+73. Roles                   74. SellosConfianza         75. ServiciosPropiedad
+76. Sesiones                77. SuscripcionesProveedor  78. TelefonosUsuario
+79. Temporadas              80. TicketsSoporte          81. TipoAlojamiento
+82. TransporteCercano       83. Usuarios                84. VerificacionesPropiedad
+85. VerificacionesUsuario   86. VideosPropiedad         87. VistasPropiedad
+88. ZonasTicas
+
+================================================================================
+FIN DEL DOCUMENTO
+Generado el: 2026-06-03
+================================================================================
