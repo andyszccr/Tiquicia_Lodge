@@ -10,7 +10,18 @@ CREATE TABLE Experiencias (
     Activo            BOOLEAN             DEFAULT TRUE NULL,
     PRIMARY KEY (IdExperiencia),
     FOREIGN KEY (IdCategoria) REFERENCES CategoriaExperiencia (IdCategoria),
-    FOREIGN KEY (IdMoneda) REFERENCES Monedas (IdMoneda)
+    FOREIGN KEY (IdMoneda) REFERENCES Monedas (IdMoneda),
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
+
 
 

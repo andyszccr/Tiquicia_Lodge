@@ -9,12 +9,34 @@ CREATE TABLE Roles (
     IdRol SERIAL PRIMARY KEY,
     NombreRol VARCHAR(50) NOT NULL UNIQUE,
     Descripcion VARCHAR(200) NULL
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE Estados (
     IdEstado SERIAL PRIMARY KEY,
     NombreEstado VARCHAR(50) NOT NULL UNIQUE,
     TipoEntidad VARCHAR(50) NULL
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE Nacionalidades (
@@ -22,6 +44,17 @@ CREATE TABLE Nacionalidades (
     Nacionalidad VARCHAR(100) NOT NULL,
     CodigoISO CHAR(2) NULL,
     Activo BOOLEAN DEFAULT TRUE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE Monedas (
@@ -29,6 +62,17 @@ CREATE TABLE Monedas (
     NombreMoneda VARCHAR(50) NOT NULL,
     CodigoISO CHAR(3) NOT NULL UNIQUE,
     Simbolo CHAR(3) NOT NULL
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE ZonasTicas (
@@ -36,12 +80,34 @@ CREATE TABLE ZonasTicas (
     NombreZona VARCHAR(100) NOT NULL,
     Descripcion VARCHAR(255) NULL,
     Activo BOOLEAN DEFAULT TRUE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE Provincias (
     IdProvincia SERIAL PRIMARY KEY,
     NombreProvincia VARCHAR(50) NOT NULL UNIQUE,
     Activo BOOLEAN DEFAULT TRUE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE CategoriaAlojamiento (
@@ -50,6 +116,17 @@ CREATE TABLE CategoriaAlojamiento (
     Descripcion VARCHAR(200) NULL,
     Icono VARCHAR(50) NULL,
     Activo BOOLEAN DEFAULT TRUE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 -- 2. Tablas con dependencias de nivel 1
@@ -58,6 +135,17 @@ CREATE TABLE Cantones (
     IdProvincia INT NOT NULL REFERENCES Provincias(IdProvincia),
     NombreCanton VARCHAR(100) NOT NULL,
     Activo BOOLEAN DEFAULT TRUE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE TipoAlojamiento (
@@ -66,6 +154,17 @@ CREATE TABLE TipoAlojamiento (
     NombreTipo VARCHAR(100) NOT NULL,
     Descripcion VARCHAR(300) NULL,
     Activo BOOLEAN DEFAULT TRUE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 -- 3. Tablas con dependencias de nivel 2
@@ -75,6 +174,17 @@ CREATE TABLE Distritos (
     NombreDistrito VARCHAR(100) NOT NULL,
     CodigoPostal VARCHAR(10) NULL,
     Activo BOOLEAN DEFAULT TRUE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 -- 4. Tabla de Usuarios (Depende de Nacionalidad, Distrito, Rol, Estado)
@@ -98,6 +208,17 @@ CREATE TABLE Usuarios (
     TelefonoConfirmado BOOLEAN DEFAULT FALSE,
     FotoPerfil VARCHAR(500) NULL,
     NotasInternas VARCHAR(500) NULL
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 -- 5. Tabla de Propiedades (Depende de Usuario, Tipo, Zona, Distrito, Estado, Moneda)
@@ -128,6 +249,17 @@ CREATE TABLE Propiedades (
     VecesVisto INT DEFAULT 0,
     RatingPromedio DECIMAL(3, 2) DEFAULT 0,
     TotalResenas INT DEFAULT 0
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 -- 6. Tabla de Reservas (Depende de Usuario, Propiedad, Estado)
@@ -148,6 +280,17 @@ CREATE TABLE Reservas (
     FechaReserva TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     NotasCliente VARCHAR(500) NULL,
     NotasInternas VARCHAR(500) NULL
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 -- 7. Tablas de Operaciones Financieras (Dependen de Reservas y Usuarios)
@@ -159,6 +302,17 @@ CREATE TABLE Facturas (
     MontoTotal DECIMAL(18, 2) NOT NULL,
     PdfURL VARCHAR(500) NULL,
     Enviada BOOLEAN DEFAULT FALSE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE Pagos (
@@ -173,6 +327,17 @@ CREATE TABLE Pagos (
     TelefonoSINPE VARCHAR(20) NULL,
     ReferenciaBanco VARCHAR(100) NULL,
     IdUsuarioRegistra INT NOT NULL REFERENCES Usuarios(IdUsuario)
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 -- 8. Auditoría y Sistema (Dependen de Usuarios)
@@ -185,6 +350,17 @@ CREATE TABLE BitacoraAcciones (
     Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     TablaAfectada VARCHAR(100) NULL,
     RegistroAfectado INT NULL
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
 
 CREATE TABLE LogsErrores (
@@ -196,4 +372,16 @@ CREATE TABLE LogsErrores (
     ErrorDetalle TEXT NULL,
     IPAddress VARCHAR(45) NULL,
     Resuelto BOOLEAN DEFAULT FALSE
+,
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
+

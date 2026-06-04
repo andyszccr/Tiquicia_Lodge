@@ -66,16 +66,34 @@ $$;
 
 CREATE TRIGGER trg_ValidarFechasReserva BEFORE INSERT OR UPDATE ON Reservas FOR EACH ROW EXECUTE FUNCTION fn_trg_ValidarFechasReserva();
 
--- Actualizar Fecha de Actualización Automáticamente
+-- Actualizar Fecha de Actualización y Usuario Automáticamente
 CREATE OR REPLACE FUNCTION fn_trg_ActualizarTimestamp()
 RETURNS TRIGGER LANGUAGE plpgsql AS $$
 BEGIN
-    NEW.FechaActualizacion = CURRENT_TIMESTAMP;
+    NEW.FechaModificacion = CURRENT_TIMESTAMP;
+    NEW.ModificadoPor = CURRENT_USER;
     RETURN NEW;
 END;
 $$;
 
 CREATE TRIGGER trg_ActualizarTimestampPropiedades BEFORE UPDATE ON Propiedades FOR EACH ROW EXECUTE FUNCTION fn_trg_ActualizarTimestamp();
+CREATE TRIGGER trg_ActualizarTimestampUsuarios BEFORE UPDATE ON Usuarios FOR EACH ROW EXECUTE FUNCTION fn_trg_ActualizarTimestamp();
+CREATE TRIGGER trg_ActualizarTimestampReservas BEFORE UPDATE ON Reservas FOR EACH ROW EXECUTE FUNCTION fn_trg_ActualizarTimestamp();
+
+-- Implementación de Soft-Delete (Manejo de Eliminación Lógica)
+CREATE OR REPLACE FUNCTION fn_trg_ManejoSoftDelete()
+RETURNS TRIGGER LANGUAGE plpgsql AS $$
+BEGIN
+    UPDATE TG_TABLE_NAME::regclass
+    SET EsEliminado = TRUE,
+        FechaEliminacion = CURRENT_TIMESTAMP,
+        UsuarioElimino = CURRENT_USER
+    WHERE IdUsuario = OLD.IdUsuario; -- Nota: Esto requiere ajuste por tabla si los IDs varían
+    
+    RAISE NOTICE 'Eliminación física cancelada. Registro marcado como eliminado lógicamente.';
+    RETURN NULL; -- Cancela el borrado físico
+END;
+$$;
 
 --------------------------------------------------------------------------------
 -- 3. SINCRONIZACIÓN DE MÉTRICAS Y TOTALES

@@ -14,7 +14,18 @@ CREATE TABLE Pagos (
     CHECK (EstadoPago='Reembolsado' OR EstadoPago='Fallido' OR EstadoPago='Completado' OR EstadoPago='Pendiente'),
     CHECK (MetodoPago='PayPal' OR MetodoPago='Transferencia' OR MetodoPago='Efectivo' OR MetodoPago='Tarjeta' OR MetodoPago='SINPE Movil'),
     FOREIGN KEY (IdReserva) REFERENCES Reservas (IdReserva),
-    FOREIGN KEY (IdUsuarioRegistra) REFERENCES Usuarios (IdUsuario)
+    FOREIGN KEY (IdUsuarioRegistra) REFERENCES Usuarios (IdUsuario),
+    -- Columnas de Auditoría (DB Senior Audit Standard)
+    CreadoPor           VARCHAR(100)      DEFAULT CURRENT_USER,
+    FechaCreacion       TIMESTAMP         DEFAULT CURRENT_TIMESTAMP,
+    ModificadoPor       VARCHAR(100)      NULL,
+    FechaModificacion   TIMESTAMP         NULL,
+    IpOrigen            VARCHAR(45)       NULL,
+    Dispositivo         VARCHAR(255)      NULL,
+    EsEliminado         BOOLEAN           DEFAULT FALSE,
+    FechaEliminacion    TIMESTAMP         NULL,
+    UsuarioElimino      VARCHAR(100)      NULL
 );
+
 
 
