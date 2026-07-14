@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tiquicia_Lodge.Domain.Entities
 {
@@ -29,7 +30,8 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdNacionalidad { get; set; }
 
         [ForeignKey("IdNacionalidad")]
-        public virtual Nacionalidades Nacionalidade { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Nacionalidades? Nacionalidade { get; set; } 
         
         [Required, MaxLength(300)]
         public string Direccion { get; set; }
@@ -37,6 +39,7 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int? IdDistrito { get; set; }
 
         [ForeignKey("IdDistrito")]
+        [JsonIgnore]
         public virtual Distritos? Distrito { get; set; }
         public DateTime? FechaNacimiento { get; set; }
         
@@ -44,11 +47,13 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdRol { get; set; }
 
         [ForeignKey("IdRol")]
-        public virtual Roles Role { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Roles? Role { get; set; } 
         public int IdEstado { get; set; }
 
         [ForeignKey("IdEstado")]
-        public virtual Estado Estado { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Estado? Estado { get; set; } 
         public DateTime? FechaRegistro { get; set; }
         public DateTime? UltimoAcceso { get; set; }
         public bool? EmailConfirmado { get; set; }

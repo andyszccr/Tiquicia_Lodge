@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tiquicia_Lodge.Domain.Entities
 {
@@ -12,7 +13,8 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdProvincia { get; set; }
 
         [ForeignKey("IdProvincia")]
-        public virtual Provincias Provincia { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Provincias? Provincia { get; set; } 
         [Required, MaxLength(100)]
         public string NombreCanton { get; set; } = null!;
         public bool? Activo { get; set; }

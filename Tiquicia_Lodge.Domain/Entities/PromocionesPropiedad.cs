@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tiquicia_Lodge.Domain.Entities
 {
@@ -11,12 +12,14 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdPromocion { get; set; }
 
         [ForeignKey("IdPromocion")]
-        public virtual Promociones Promocione { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Promociones? Promocione { get; set; } 
 
         [Key, Column(Order = 1)]
         public int IdPropiedad { get; set; }
 
         [ForeignKey("IdPropiedad")]
-        public virtual Propiedad Propiedad { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Propiedad? Propiedad { get; set; } 
     }
 }

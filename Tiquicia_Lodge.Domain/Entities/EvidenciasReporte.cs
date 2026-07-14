@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tiquicia_Lodge.Domain.Entities
 {
@@ -14,7 +15,8 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdReporte { get; set; }
 
         [ForeignKey("IdReporte")]
-        public virtual Reportes Reporte { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Reportes? Reporte { get; set; } 
 
         [MaxLength(30)]
         public string? TipoEvidencia { get; set; }

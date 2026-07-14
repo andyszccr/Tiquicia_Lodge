@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tiquicia_Lodge.Domain.Entities
 {
@@ -14,7 +15,8 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdReserva { get; set; }
 
         [ForeignKey("IdReserva")]
-        public virtual Reserva Reserva { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Reserva? Reserva { get; set; } 
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal Monto_CRC { get; set; }

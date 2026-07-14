@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 namespace Tiquicia_Lodge.Domain.Entities {
     public class VerificacionesUsuario {
         [Key]
@@ -9,7 +10,8 @@ namespace Tiquicia_Lodge.Domain.Entities {
         public int IdUsuario { get; set; }
 
         [ForeignKey("IdUsuario")]
-        public virtual Usuario Usuario { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Usuario? Usuario { get; set; } 
         [MaxLength(50)]
         public string? TipoVerificacion { get; set; }
         public bool? Verificado { get; set; }

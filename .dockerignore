@@ -1,0 +1,11 @@
+**/.git
+**/.vs
+**/bin
+**/obj
+**/node_modules
+**/debug
+**/.gitignore
+**/README.md
+*.log
+*.sqlproj
+*.sqlproj.user

@@ -2422,3 +2422,104 @@ ALTER TABLE [dbo].[Usuarios] ADD CONSTRAINT [FK_Usuarios_Roles_IdRol] FOREIGN KE
 ALTER TABLE [dbo].[Usuarios] ADD CONSTRAINT [FK_Usuarios_Estado_IdEstado] FOREIGN KEY([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]);
 ALTER TABLE [dbo].[VerificacionesUsuario] ADD CONSTRAINT [FK_VerificacionesUsuario_Usuario_IdUsuario] FOREIGN KEY([IdUsuario]) REFERENCES [dbo].[Usuarios] ([IdUsuario]);
 GO
+
+-- Fix table name mismatch: DbSet<RecuperacionContrasena> RecuperacionesContrasena maps to table RecuperacionesContrasena
+EXEC sp_rename 'dbo.RecuperacionContrasena', 'RecuperacionesContrasena';
+GO
+
+-- Seed data for reference tables (no API controller, needed by FK constraints)
+SET IDENTITY_INSERT [dbo].[CategoriaAlojamiento] ON;
+INSERT INTO [dbo].[CategoriaAlojamiento] ([IdCategoria], [NombreCategoria], [Descripcion], [Activo]) VALUES
+(1, 'Estandar', 'Alojamiento estandar', 1);
+SET IDENTITY_INSERT [dbo].[CategoriaAlojamiento] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[TipoAlojamiento] ON;
+INSERT INTO [dbo].[TipoAlojamiento] ([IdTipo], [IdCategoria], [NombreTipo], [Descripcion], [Activo]) VALUES
+(1, 1, 'Casa Completa', 'Casa o villa completa', 1);
+SET IDENTITY_INSERT [dbo].[TipoAlojamiento] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[ZonasTicas] ON;
+INSERT INTO [dbo].[ZonasTicas] ([IdZona], [NombreZona], [Descripcion], [Activo]) VALUES
+(1, 'Urbana', 'Zona urbana', 1), (2, 'Rural', 'Zona rural', 1);
+SET IDENTITY_INSERT [dbo].[ZonasTicas] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[Monedas] ON;
+INSERT INTO [dbo].[Monedas] ([IdMoneda], [NombreMoneda], [CodigoISO], [Simbolo]) VALUES
+(1, 'Colones CR', 'CRC', 'CRC');
+SET IDENTITY_INSERT [dbo].[Monedas] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[CategoriaEquipamiento] ON;
+INSERT INTO [dbo].[CategoriaEquipamiento] ([IdCategoria], [NombreCategoria], [Descripcion], [Icono], [Activo]) VALUES
+(1, 'General', 'Equipamiento general', 'gear', 1);
+SET IDENTITY_INSERT [dbo].[CategoriaEquipamiento] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[CategoriaServicio] ON;
+INSERT INTO [dbo].[CategoriaServicio] ([IdCategoria], [NombreCategoria], [Descripcion], [Icono]) VALUES
+(1, 'General', 'Servicios generales', 'service');
+SET IDENTITY_INSERT [dbo].[CategoriaServicio] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[ServiciosPropiedad] ON;
+INSERT INTO [dbo].[ServiciosPropiedad] ([IdServicio], [IdCategoria], [NombreServicio], [Descripcion], [Activo]) VALUES
+(1, 1, 'Limpieza', 'Servicio de limpieza', 1);
+SET IDENTITY_INSERT [dbo].[ServiciosPropiedad] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[Equipamiento] ON;
+INSERT INTO [dbo].[Equipamiento] ([IdEquipamiento], [IdCategoria], [NombreEquipamiento], [Descripcion], [Activo]) VALUES
+(1, 1, 'WiFi', 'Internet inalambrico', 1);
+SET IDENTITY_INSERT [dbo].[Equipamiento] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[CategoriasFAQ] ON;
+INSERT INTO [dbo].[CategoriasFAQ] ([IdCategoriaFAQ], [NombreCategoria], [Descripcion], [Orden], [Activo]) VALUES
+(1, 'General', 'FAQ general', 1, 1);
+SET IDENTITY_INSERT [dbo].[CategoriasFAQ] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[PoliticasCancelacion] ON;
+INSERT INTO [dbo].[PoliticasCancelacion] ([IdPolitica], [NombrePolitica], [Descripcion], [ReembolsoPorcentaje], [DiasAntelacion], [Activo]) VALUES
+(1, 'Flexible', 'Politica flexible', 100.00, 3, 1);
+SET IDENTITY_INSERT [dbo].[PoliticasCancelacion] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[Promociones] ON;
+INSERT INTO [dbo].[Promociones] ([IdPromocion], [NombrePromo], [Descripcion], [TipoPromo], [PorcentajeDescuento], [FechaInicio], [FechaFin], [Activo]) VALUES
+(1, 'Verano', 'Descuento de verano', 'TemporadaBaja', 15.00, '2026-01-01', '2026-12-31', 1);
+SET IDENTITY_INSERT [dbo].[Promociones] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[ReglasCasa] ON;
+INSERT INTO [dbo].[ReglasCasa] ([IdRegla], [NombreRegla], [Descripcion], [Icono]) VALUES
+(1, 'No Fumar', 'Prohibido fumar', 'no-smoking');
+SET IDENTITY_INSERT [dbo].[ReglasCasa] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[TransporteCercano] ON;
+INSERT INTO [dbo].[TransporteCercano] ([IdTransporte], [TipoTransporte], [Nombre], [DistanciaReferencia], [Telefono]) VALUES
+(1, 'Parada de Bus', 'Parada Principal', '200m', '2222-2222');
+SET IDENTITY_INSERT [dbo].[TransporteCercano] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[ComerciosCercanos] ON;
+INSERT INTO [dbo].[ComerciosCercanos] ([IdComercio], [NombreComercio], [TipoComercio], [Telefono], [Direccion], [HorarioAtencion], [Activo]) VALUES
+(1, 'Super Mercado', 'Supermercado', '2255-5555', 'Calle Principal', '8am-6pm', 1);
+SET IDENTITY_INSERT [dbo].[ComerciosCercanos] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[CategoriaExperiencia] ON;
+INSERT INTO [dbo].[CategoriaExperiencia] ([IdCategoria], [NombreCategoria], [Descripcion], [Icono]) VALUES
+(1, 'General', 'Experiencias generales', 'star');
+SET IDENTITY_INSERT [dbo].[CategoriaExperiencia] OFF;
+GO
+
+SET IDENTITY_INSERT [dbo].[CategoriaLugarTuristico] ON;
+INSERT INTO [dbo].[CategoriaLugarTuristico] ([IdCategoria], [NombreCategoria], [Icono], [Descripcion]) VALUES
+(1, 'General', 'pin', 'Lugares generales');
+SET IDENTITY_INSERT [dbo].[CategoriaLugarTuristico] OFF;
+GO

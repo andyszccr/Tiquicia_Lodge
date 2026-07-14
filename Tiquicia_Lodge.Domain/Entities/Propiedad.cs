@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tiquicia_Lodge.Domain.Entities
 {
@@ -17,6 +18,7 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int? IdDistrito { get; set; }
 
         [ForeignKey("IdDistrito")]
+        [JsonIgnore]
         public virtual Distritos? Distrito { get; set; }
         
         [Required, MaxLength(250)]
@@ -51,7 +53,8 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdEstado { get; set; }
 
         [ForeignKey("IdEstado")]
-        public virtual Estado Estado { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Estado? Estado { get; set; } 
         public bool? Verificado { get; set; }
         public DateTime? FechaRegistro { get; set; }
         public DateTime? FechaActualizacion { get; set; }

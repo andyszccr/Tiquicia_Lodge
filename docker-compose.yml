@@ -1,0 +1,38 @@
+services:
+  sqlserver:
+    build:
+      context: ./docker/sql
+    container_name: tiquicia-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "TiquiciaLodge2026!"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./PuraVida.sql:/scripts/PuraVida.sql
+      - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "TiquiciaLodge2026!" -C -Q "SELECT 1" &> /dev/null
+      interval: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Tiquicia_Lodge/Dockerfile
+    container_name: tiquicia-api
+    ports:
+      - "61787:80"
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=TiquiciaLodge2;User Id=sa;Password=TiquiciaLodge2026!;MultipleActiveResultSets=true;TrustServerCertificate=True"
+      ASPNETCORE_ENVIRONMENT: "Development"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  sqlserver-data:

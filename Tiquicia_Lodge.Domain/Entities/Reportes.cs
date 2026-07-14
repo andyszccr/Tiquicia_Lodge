@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Tiquicia_Lodge.Domain.Entities
 {
@@ -30,7 +31,8 @@ namespace Tiquicia_Lodge.Domain.Entities
         public int IdEstado { get; set; }
 
         [ForeignKey("IdEstado")]
-        public virtual Estado Estado { get; set; } = null!;
+        [JsonIgnore]
+        public virtual Estado? Estado { get; set; } 
 
         [MaxLength(500)]
         public string? Resolucion { get; set; }
